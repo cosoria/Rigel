@@ -1,0 +1,8 @@
+Rigel.Messeing -> IBus, DirectBus, Distrubuted, IEvent, ICommand, IMessage (Id(guid), Timestamp(utc))
+Rigel.Logging  -> NLog, Elmah
+Rigel.Core -> Extensions, 
+Rigel.SmartClient
+Rigel.AspNet -> MVP 
+Rigel.Batch -> parameter framework, BaseBatchApplication (prepare, backup, run, load container), BatchHost
+Rigel.UnitOfWork
+Rigel.Data
