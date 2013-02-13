@@ -4,7 +4,7 @@ using System.Security;
 
 [assembly: AssemblyCompany("Rigel Technologies Inc")]
 [assembly: AssemblyProduct("Rigel Infrastructure Libraries")]
-[assembly: AssemblyCopyright("Copyright © Rigel Software  2013")]
+[assembly: AssemblyCopyright("Copyright © Technologies Inc  2013")]
 [assembly: AssemblyTrademark("These Libraries are relased under the terms of BSD license")]
 [assembly: AssemblyCulture("")]
 [assembly: AllowPartiallyTrustedCallers]
