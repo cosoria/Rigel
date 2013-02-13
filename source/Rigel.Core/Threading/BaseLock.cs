@@ -9,6 +9,7 @@ namespace Rigel.Core.Threading
 
         protected BaseLock(ReaderWriterLockSlim lockObject)
         {
+            Ensure.NotNull(lockObject);
             _lockObject = lockObject;
         }
 

@@ -41,15 +41,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Disposable.cs" />
+    <Compile Include="Ensure.cs" />
+    <Compile Include="Errors.cs" />
     <Compile Include="GlobalAssemblyInfo.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\FileLogger.cs" />
     <Compile Include="Logging\ILogger.cs" />
     <Compile Include="Logging\ILoggerFactory.cs" />
     <Compile Include="Logging\LoggerExtensions.cs" />
+    <Compile Include="Logging\LoggerFactory.cs" />
     <Compile Include="Logging\LogSeverity.cs" />
     <Compile Include="Logging\NullLogger.cs" />
-    <Compile Include="Logging\NullLoggerFactory.cs" />
     <Compile Include="Logging\SystemEventLogger.cs" />
     <Compile Include="Messaging\Messages.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
