@@ -8,7 +8,7 @@ namespace Rigel.Core.Logging
 
         public LoggerFactory(ILogger logger)
         {
-            Ensure.NotNull(logger);
+            Ensure.Argument.NotNull(() => logger);
             _logger = logger;
         }
 
@@ -19,13 +19,13 @@ namespace Rigel.Core.Logging
 
         public ILogger Create(object instance)
         {
-            Ensure.NotNull(instance);
+            Ensure.Argument.NotNull(() => instance);
             return Create(instance.GetType());
         }
 
         public ILogger Create(Type instanceType)
         {
-            Ensure.NotNull(instanceType);
+            Ensure.Argument.NotNull(() => instanceType);
             _logger.LogInfo("--[Type:{0}]--", instanceType.Name);
             return _logger;
         }

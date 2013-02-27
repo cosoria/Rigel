@@ -6,3 +6,119 @@ Rigel.AspNet -> MVP
 Rigel.Batch -> parameter framework, BaseBatchApplication (prepare, backup, run, load container), BatchHost
 Rigel.UnitOfWork
 Rigel.Data
+Rigel.Trasactions()
+
+
+Client 
+
+Accepts Command, Publish Events 
+Domain smart logic Brain 
+Services muscles --> Credit Gateway
+Service --> Sggjj
+
+CustomerDomain 
+{
+  private CustomerState _state;
+
+CustomerDomain(_state)   
+{
+}
+
+ValueObject
+ ChangeAddress(Address add)
+{
+if if i fi fi f
+
+_state.Address = Address;
+  DomainEvents.Publish(CustomerAddresChnged(id, address)); // marketing, shipping
+  
+  DomainEvents : IBus
+  ApplicationController : IBus
+}
+IEvent 
+
+   ApplicationControler.Publish(CustomerSelected(id)) --> Needs to anohter screen 
+   Bus.Publish(CustomerAddressChanged) --> Needs on distribud bus 
+  
+}
+
+
+vat state = _repo.GetCustomer(id)
+
+var domian = new CustomerDomain(state);
+Service 
+domain.ChangeAddres(address)
+
+
+_repo.Add(domain.GetState())
+
+//publish event so that 
+
+
+
+WCF Service, REST 
+Task Layer
+DAL
+Dabase
+[
+A set of classes <Assembly>
+<Component>
+  Functionality == Add Contact Manamte
+  <Domains>
+  <Commands>
+  <Events>
+]
+
+DAL
+ 
+
+
+SmartClient 
+
+[
+A set of classes <Assembly>
+<Component>
+  Functionality == Contact Manamte
+  <Domains>
+  <Commands>
+  <Events>
+]
+
+SqlLitte 
+
+
+
+
+
+ using (TransactionScope scope = TransactionManager.GetTransactionScope())
+ {
+ asdfasdfas
+ }asdf
+ asd
+ fasd
+ fas
+ trans.compsleus()
+
+
+1-800-785-6575
+
+plasma membrane is made up of phospholipid bilayer, in the bilayer there are proteins that help transfer
+we need info on how the layerand protien respond to cold and hot temperatures
+beet or beta vulgaris
+cell lysis with temperature
+protein degradation
+
+asdfjsd 
+
+
+343.66
+
+Kella 
+780-603-7880
+
+
+
+
+
+
+
