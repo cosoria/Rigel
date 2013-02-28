@@ -33,8 +33,7 @@ namespace Rigel.Core.Extensions
 
         public static DataTable ToDataTable<T>(this IList<T> data)
         {
-            PropertyDescriptorCollection props =
-                TypeDescriptor.GetProperties(typeof (T));
+            PropertyDescriptorCollection props = TypeDescriptor.GetProperties(typeof (T));
 
             DataTable table = new DataTable();
             for (int i = 0; i < props.Count; i++)
