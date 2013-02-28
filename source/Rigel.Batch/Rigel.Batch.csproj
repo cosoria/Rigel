@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E8EAB5A-F711-48A4-B264-5869E390F18F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rigel.Batch</RootNamespace>
+    <AssemblyName>Rigel.Batch</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arguments\Attributes\ArgumentBinder.cs" />
+    <Compile Include="Arguments\Attributes\ArgumentParser.cs" />
+    <Compile Include="Arguments\Attributes\BaseArgumentAttribute.cs" />
+    <Compile Include="Arguments\Attributes\BooleanAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Boolean\DownloadDataAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Date\EndDateAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Date\RunAsDateAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Date\StartDateAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Directories\InputDirectoryAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Directories\SecondInputDirectoryAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Directories\WorkingDirectoryAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Filenames\FlatFilenameAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Filenames\InputFilenameAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Filenames\OutputFilenameAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Filenames\SecondInputFilenameAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Filenames\SecondOutputFilenameAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Filenames\ThirdOutputFilenameAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\Integer\EmailLevelAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\String\BatchNameAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\String\EmailRecipientsAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\String\EmailSenderAttribute.cs" />
+    <Compile Include="Arguments\Attributes\Customized\String\EspnGameAttribute.cs" />
+    <Compile Include="Arguments\Attributes\DateAttribute.cs" />
+    <Compile Include="Arguments\Attributes\DecimalAttribute.cs" />
+    <Compile Include="Arguments\Attributes\DirectoryAttribute.cs" />
+    <Compile Include="Arguments\Attributes\FilenameAttribute.cs" />
+    <Compile Include="Arguments\Attributes\IntegerAttribute.cs" />
+    <Compile Include="Arguments\Attributes\MemberInfoAdapter.cs" />
+    <Compile Include="Arguments\Attributes\RegisteredArgumentAttributes.cs" />
+    <Compile Include="Arguments\Attributes\StringAttribute.cs" />
+    <Compile Include="Arguments\Attributes\StringListAttribute.cs" />
+    <Compile Include="Arguments\CommonBatchArguments.cs" />
+    <Compile Include="BaseBatchApplication.cs" />
+    <Compile Include="BaseLauncher.cs" />
+    <Compile Include="BatchExecutableAttribute.cs" />
+    <Compile Include="Common\BatchConstants.cs" />
+    <Compile Include="Common\BatchEmailService.cs" />
+    <Compile Include="Common\Config\BatchSettings.cs" />
+    <Compile Include="Common\Config\BatchSettingsSection.cs" />
+    <Compile Include="Common\Config\CommonBatchSettingsElement.cs" />
+    <Compile Include="Common\Config\ConfigurationConstants.cs" />
+    <Compile Include="Common\Config\ConfigurationManager.cs" />
+    <Compile Include="Common\Config\ErrorNotificationSettingsSection.cs" />
+    <Compile Include="Common\Config\IConfigurationManager.cs" />
+    <Compile Include="Common\Config\NotificationSettingsElement.cs" />
+    <Compile Include="Common\Config\SmtpSettingsElement.cs" />
+    <Compile Include="Common\Mail\IMailMessage.cs" />
+    <Compile Include="Common\Mail\IPostmaster.cs" />
+    <Compile Include="Common\Mail\MailConstants.cs" />
+    <Compile Include="Common\Mail\MailMessage.cs" />
+    <Compile Include="Common\Mail\Postmaster.cs" />
+    <Compile Include="Common\ReturnCode.cs" />
+    <Compile Include="Common\Configuration.cs" />
+    <Compile Include="IBatchApplication.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rigel.Core\Rigel.Core.csproj">
+      <Project>{D4648A46-1898-48FD-8C5B-5263DD09CA8D}</Project>
+      <Name>Rigel.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
