@@ -4,6 +4,7 @@ using System.Runtime.CompilerServices;
 using Rigel.Batch.Arguments;
 using Rigel.Batch.Common;
 using Rigel.Batch.Common.Config;
+using Rigel.Core;
 using Rigel.Core.Logging;
 
 namespace Rigel.Batch
@@ -11,7 +12,7 @@ namespace Rigel.Batch
     /// <summary>
     /// Taking pieces of UnitOfWorkApplication from RhinoCommons.
     /// </summary>
-    public abstract class BaseBatchApplication : IBatchApplication, IDisposable //,IContainerAccessor 
+    public abstract class BaseBatchApplication : Disposable, IBatchApplication  //,IContainerAccessor 
     {
         private const string BACKUP_PREFIX = "backup_";
         
@@ -201,14 +202,15 @@ namespace Rigel.Batch
             //}
         }
 
-        public void Dispose()
+
+        protected override void DisposeManagedResources()
         {
             if (watcher != null)
             {
                 watcher.Dispose();
             }
         }
-
+        
         //private void CreateContainer()
         //{
         //    var windsorConfig = GetWindsorConfig();
