@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{02DB085E-1AFB-407E-8FCD-5E28BA2967BC}</ProjectGuid>
+    <ProjectGuid>{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rigel.SampleBatchApp</RootNamespace>
-    <AssemblyName>Rigel.SampleBatchApp</AssemblyName>
+    <RootNamespace>Rigel.Data</RootNamespace>
+    <AssemblyName>Rigel.Data</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,15 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SampleBatchApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Rigel.Batch\Rigel.Batch.csproj">
-      <Project>{8E8EAB5A-F711-48A4-B264-5869E390F18F}</Project>
-      <Name>Rigel.Batch</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Rigel.Core\Rigel.Core.csproj">
+    <ProjectReference Include="..\Rigel.Core\Rigel.Core.csproj">
       <Project>{D4648A46-1898-48FD-8C5B-5263DD09CA8D}</Project>
       <Name>Rigel.Core</Name>
     </ProjectReference>

@@ -49,7 +49,7 @@
     <Compile Include="Domain\IDomainState.cs" />
     <Compile Include="Ensure.cs" />
     <Compile Include="Extensions\BasicExtensions.cs" />
-    <Compile Include="Extensions\StringExtensins.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="GlobalAssemblyInfo.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\FileLogger.cs" />
@@ -72,7 +72,6 @@
     <Compile Include="Math\MoreMath.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reflection\Reflect.cs" />
-    <Compile Include="StringExtensions.cs" />
     <Compile Include="Threading\BaseLock.cs" />
     <Compile Include="Threading\Locks.cs" />
     <Compile Include="SystemTime.cs" />
@@ -82,11 +81,16 @@
     <Compile Include="Transactions\TransactionScope.cs" />
     <Compile Include="Reflection\Accessor.cs" />
     <Compile Include="Reflection\DelegateAdjuster.cs" />
-    <Compile Include="Encryption\Encrypter.cs" />
+    <Compile Include="Encryption\Cypher.cs" />
     <Compile Include="Reflection\PropertyChain.cs" />
     <Compile Include="Math\RandomNumberGenerator.cs" />
     <Compile Include="Reflection\ReflectionHelper.cs" />
     <Compile Include="Reflection\SingleProperty.cs" />
+    <Compile Include="UI\IPresenter.cs" />
+    <Compile Include="UI\IView.cs" />
+    <Compile Include="Utils\ArrayUtil.cs" />
+    <Compile Include="Utils\GuidUtil.cs" />
+    <Compile Include="Utils\StringUtil.cs" />
     <Compile Include="VersionAssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

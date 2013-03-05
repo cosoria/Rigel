@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Rigel.Core;
 
 namespace Rigel.Batch
 {
@@ -81,6 +82,8 @@ namespace Rigel.Batch
 
         private static void AddNonEmptyStringTo(List<string> batchNames, string batchName)
         {
+            Ensure.Argument.NotNull(() => batchNames);
+            Ensure.Argument.NotNullOrEmpty(() => batchName);
             if(!string.IsNullOrEmpty(batchName))
             {
                 batchNames.Add(batchName);

@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Rigel.Core.Reflection;
+using Rigel.Core.Utils;
 
 namespace Rigel.Core
 {
     public static class Ensure
     {
-        public static void That(bool condition, string message = "No descriptive message supplied")
+        public static void That(bool condition, string message = "Condition specified was not met for the expression")
         {
-            That<Exception>(condition, message);
+            That<InvalidOperationException>(condition, message);
         }
 
-        public static void That<TException>(bool condition, string message = "No descriptive message supplied")
+        public static void That<TException>(bool condition, string message = "Condition specified was not met for the expression")
             where TException : Exception
         {
             if (!condition)
@@ -23,20 +23,32 @@ namespace Rigel.Core
             }
         }
 
-        public static void Not(bool condition, string message = "No descriptive message supplied")
+        public static void Not(bool condition, string message = "Condition specified was not met for the expression")
         {
             Not<Exception>(condition, message);
         }
 
-        public static void Not<TException>(bool condition, string message = "No descriptive message supplied")
+        public static void Not<TException>(bool condition, string message = "Condition specified was not met for the expression")
             where TException : Exception
         {
             That<TException>(!condition, message);
         }
 
-        public static void NotNull(object value, string message = "No descriptive message supplied")
+        public static void NotNull(object value, string message = "Value specified can not be null")
         {
             That<NullReferenceException>(value != null, message);
+        }
+
+        public static void NotNull<TValue>(Expression<Func<TValue>> argumentExpression) where TValue:class
+        {
+            if (argumentExpression.Compile()() != null)
+            {
+                return;
+            }
+
+            var paramName = Reflect.VariableName(argumentExpression);
+            var message = StringUtil.FormatInvariant("Value {0} of type '{1}' can not be null", paramName, typeof(TValue).Name);
+            throw new NullReferenceException(message);
         }
 
         public static class Argument
@@ -66,7 +78,20 @@ namespace Rigel.Core
                 }
 
 
-                var message = StringExtensions.FormatInvariant("Parameter of type '{0}' can't be null", typeof (TValue).Name);
+                var message = StringUtil.FormatInvariant("Parameter of type '{0}' can't be null", typeof (TValue).Name);
+                var paramName = Reflect.VariableName(argumentReference);
+                throw new ArgumentNullException(paramName, message);
+            }
+
+            public static void NotNullOrEmpty<TValue>(Expression<Func<TValue>> argumentReference) where TValue: class, IEnumerable
+            {
+                var d = argumentReference.Compile();
+                if (d() != null && d().OfType<object>().Any())
+                {
+                    return;
+                }
+
+                var message = StringUtil.FormatInvariant("Parameter of type '{0}' can't be null or empty", typeof(TValue).Name);
                 var paramName = Reflect.VariableName(argumentReference);
                 throw new ArgumentNullException(paramName, message);
             }

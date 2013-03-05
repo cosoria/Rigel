@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{02DB085E-1AFB-407E-8FCD-5E28BA2967BC}</ProjectGuid>
+    <ProjectGuid>{650082B2-67F7-4759-8AA3-4D8A14B0F084}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rigel.SampleBatchApp</RootNamespace>
-    <AssemblyName>Rigel.SampleBatchApp</AssemblyName>
+    <RootNamespace>Rigel.Core.Test</RootNamespace>
+    <AssemblyName>Rigel.Core.Test</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -31,6 +31,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -40,18 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SampleBatchApplication.cs" />
+    <Compile Include="EnsureTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Rigel.Batch\Rigel.Batch.csproj">
-      <Project>{8E8EAB5A-F711-48A4-B264-5869E390F18F}</Project>
-      <Name>Rigel.Batch</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Rigel.Core\Rigel.Core.csproj">
+    <ProjectReference Include="..\Rigel.Core\Rigel.Core.csproj">
       <Project>{D4648A46-1898-48FD-8C5B-5263DD09CA8D}</Project>
       <Name>Rigel.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

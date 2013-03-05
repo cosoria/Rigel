@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
 
 namespace Rigel.Core.Data
 {
@@ -25,6 +27,11 @@ namespace Rigel.Core.Data
         public virtual IEnumerable<TEntry> GetAll()
         {
             return _entries.Values;
+        }
+
+        public IEnumerable<TEntry> GetAllMatching(Expression<Func<TEntry, bool>> filter)
+        {
+            return _entries.Values.AsQueryable().Where(filter).ToArray();
         }
 
         public virtual void Add(TKey key, TEntry entry)

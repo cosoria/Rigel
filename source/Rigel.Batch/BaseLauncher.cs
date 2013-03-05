@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Rigel.Batch.Arguments.Attributes;
 using Rigel.Batch.Common;
+using Rigel.Core;
 using Rigel.Core.Logging;
 
 namespace Rigel.Batch
@@ -12,7 +13,7 @@ namespace Rigel.Batch
     /// </summary>
     public class BaseLauncher
     {
-        private static ILogger _logger = new ConsoleLogger(); // todo inject with ioc
+        private static readonly ILogger _logger = new ConsoleLogger(); // todo inject with ioc
 
         #region Variables
 
@@ -53,7 +54,8 @@ namespace Rigel.Batch
 
         protected static void LogBindErrors(List<string> errors)
         {
-            if((errors != null) && (errors.Count > 0))
+            Ensure.Argument.NotNull(() => errors);
+            if(errors.Count > 0)
             {
                 EpicFail("There was one or more errors with the arguments:");
                 EpicFail("------------------------------------------------");

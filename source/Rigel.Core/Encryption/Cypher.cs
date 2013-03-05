@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Rigel.Core.Encryption
 {
-    public class Encrypter
+    public class Cypher
     {
         private static byte[] _salt = Encoding.ASCII.GetBytes("o6806642kbM7c5");
 

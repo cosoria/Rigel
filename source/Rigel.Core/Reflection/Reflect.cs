@@ -20,5 +20,21 @@ namespace Rigel.Core.Reflection
 
             return body.Member.Name;
         }
+
+        public static string LogicalExpression<T>(Expression<Func<T>> expression)
+        {
+            if (expression == null)
+            {
+                return "?";
+            }
+
+            var body = expression.Body as BinaryExpression;
+            if (body == null)
+            {
+                return "?";
+            }
+
+            return body.Left.ToString();
+        }
     }
 }

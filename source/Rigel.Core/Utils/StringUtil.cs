@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
+﻿using System.Globalization;
 
-namespace Rigel.Core
+namespace Rigel.Core.Utils
 {
-    public static class StringExtensions
+    public static class StringUtil
     {
         public static string FormatInvariant(string format, params object[] parameters)
         {
