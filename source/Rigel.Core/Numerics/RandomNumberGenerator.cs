@@ -1,6 +1,6 @@
 using System;
 
-namespace Rigel.Core.Math
+namespace Rigel.Core.Numerics
 {
     public sealed class RandomNumberGenerator 
     {

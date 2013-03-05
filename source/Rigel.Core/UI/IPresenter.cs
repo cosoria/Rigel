@@ -5,7 +5,7 @@
         IView View { get; }
     }
 
-    public interface IPresenter<TModel>  where TModel: class
+    public interface IPresenter<TModel> : IPresenter where TModel: class
     {
         IView<TModel> View { get; }
     }
