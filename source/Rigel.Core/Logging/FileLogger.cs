@@ -1,9 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
+using Rigel.Core;
 using Rigel.Core.Threading;
 
-namespace Rigel.Core.Logging
+namespace Rigel.Logging
 {
     public class FileLogger : Disposable, ILogger
     {

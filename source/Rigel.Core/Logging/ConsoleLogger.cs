@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Threading;
+using Rigel.Core;
 
-namespace Rigel.Core.Logging
+namespace Rigel.Logging
 {
     public class ConsoleLogger : ILogger
     {

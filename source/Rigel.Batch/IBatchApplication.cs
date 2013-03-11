@@ -1,5 +1,5 @@
 using Rigel.Batch.Arguments;
-using Rigel.Core.Logging;
+using Rigel.Logging;
 
 namespace Rigel.Batch
 {

@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Rigel.Core.Encryption
+namespace Rigel.Encryption
 {
     public class Cypher
     {

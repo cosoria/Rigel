@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace Rigel.Core.Data
+namespace Rigel.Data
 {
     public class InMemoryRepository<TEntry, TKey> : IRepository<TEntry, TKey>
     {

@@ -2,7 +2,7 @@
 using System.IO;
 using Rigel.Batch.Common.Config;
 using Rigel.Batch.Common.Mail;
-using Rigel.Core.Logging;
+using Rigel.Logging;
 using ConfigurationManager = System.Configuration.ConfigurationManager;
 
 namespace Rigel.Batch.Common

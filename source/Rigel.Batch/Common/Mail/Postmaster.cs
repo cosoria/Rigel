@@ -2,7 +2,7 @@ using System;
 using System.Net;
 using System.Net.Mail;
 using Rigel.Batch.Common.Config;
-using Rigel.Core.Logging;
+using Rigel.Logging;
 
 namespace Rigel.Batch.Common.Mail
 {

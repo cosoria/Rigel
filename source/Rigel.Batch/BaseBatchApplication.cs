@@ -1,11 +1,10 @@
 ﻿using System;
 using System.IO;
-using System.Runtime.CompilerServices;
 using Rigel.Batch.Arguments;
 using Rigel.Batch.Common;
 using Rigel.Batch.Common.Config;
 using Rigel.Core;
-using Rigel.Core.Logging;
+using Rigel.Logging;
 
 namespace Rigel.Batch
 {

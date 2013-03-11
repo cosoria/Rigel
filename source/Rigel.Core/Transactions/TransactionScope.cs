@@ -1,6 +1,6 @@
 ﻿using System.Transactions;
 
-namespace Rigel.Core.Transactions
+namespace Rigel.Transactions
 {
     public static class Transactions
     {

@@ -1,4 +1,4 @@
-﻿namespace Rigel.Core.UI
+﻿namespace Rigel.UI
 {
     public interface IPresenter
     {
@@ -7,6 +7,8 @@
 
     public interface IPresenter<TModel> : IPresenter where TModel: class
     {
+        #pragma warning disable 108,114
         IView<TModel> View { get; }
+        #pragma warning restore 108,114
     }
 }

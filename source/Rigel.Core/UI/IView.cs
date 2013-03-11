@@ -1,4 +1,4 @@
-﻿namespace Rigel.Core.UI
+﻿namespace Rigel.UI
 {
     public interface IView
     {

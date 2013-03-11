@@ -84,7 +84,7 @@ namespace Rigel.Core.Test
                 Ensure.Argument.NotNullOrEmpty(() => param);
                 Assert.Fail();
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                Assert.Pass();
             }

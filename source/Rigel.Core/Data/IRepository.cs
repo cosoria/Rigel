@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq.Expressions;
 
-namespace Rigel.Core.Data
+namespace Rigel.Data
 {
     public interface IRepository<TEntry, in TKey>
     {

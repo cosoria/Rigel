@@ -1,4 +1,4 @@
-﻿namespace Rigel.Core.Logging
+﻿namespace Rigel.Logging
 {
     public interface ILogger
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Rigel.Core.Logging
+namespace Rigel.Logging
 {
     public interface ILoggerFactory
     {

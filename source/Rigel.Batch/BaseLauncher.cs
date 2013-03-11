@@ -4,7 +4,7 @@ using System.Reflection;
 using Rigel.Batch.Arguments.Attributes;
 using Rigel.Batch.Common;
 using Rigel.Core;
-using Rigel.Core.Logging;
+using Rigel.Logging;
 
 namespace Rigel.Batch
 {
