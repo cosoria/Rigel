@@ -2,7 +2,7 @@
 
 namespace Rigel.Transactions
 {
-    public static class Transactions
+    public static class ScopeFactory
     {
         public static TransactionScope CreateScope()
         {
