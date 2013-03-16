@@ -50,6 +50,21 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="NLog, Version=2.0.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>packages\NLog.2.0.0.2000\lib\net40\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Rigel.Core, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\binaries\Rigel.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rigel.Data, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\binaries\Rigel.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Rigel.Logging, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\binaries\Rigel.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -64,20 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Rigel.Core\Rigel.Core.csproj">
-      <Project>{D4648A46-1898-48FD-8C5B-5263DD09CA8D}</Project>
-      <Name>Rigel.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Rigel.Data\Rigel.Data.csproj">
-      <Project>{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}</Project>
-      <Name>Rigel.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Rigel.Logging\Rigel.Logging.csproj">
-      <Project>{09069FBB-4519-4152-BB5C-3696A4BE3368}</Project>
-      <Name>Rigel.Logging</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0">

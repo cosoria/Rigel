@@ -31,6 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Rigel.Batch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\binaries\Rigel.Batch.dll</HintPath>
+    </Reference>
+    <Reference Include="Rigel.Core, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\binaries\Rigel.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Rigel.Logging">
+      <HintPath>..\..\binaries\Rigel.Logging.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,16 +53,6 @@
   <ItemGroup>
     <Compile Include="SampleBatchApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Rigel.Batch\Rigel.Batch.csproj">
-      <Project>{8E8EAB5A-F711-48A4-B264-5869E390F18F}</Project>
-      <Name>Rigel.Batch</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Rigel.Core\Rigel.Core.csproj">
-      <Project>{D4648A46-1898-48FD-8C5B-5263DD09CA8D}</Project>
-      <Name>Rigel.Core</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
