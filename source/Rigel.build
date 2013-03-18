@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+ <!-- Initialization -->
+<PropertyGroup>
+  <RootFolder>$(MSBuildProjectDirectory)\..</RootFolder>
+
+  <SourceFolder>$(RootFolder)\source</SourceFolder>
+  <ConfigFolder>$(RootFolder)\config</ConfigFolder>  
+  <LibFolder>$(RootFolder)\lib</LibFolder>
+  <ToolsFolder>$(RootFolder)\tools</ToolsFolder>
+  
+  <DBScriptsFolder>$(RootFolder)\db</DBScriptsFolder>
+
+  <BuildFolder>$(RootFolder)\build</BuildFolder>
+  <DeployFolder>$(RootFolder)\deploy</DeployFolder>
+  <PublishFolder>$(RootFolder)\publish</PublishFolder>
+   
+  
+  <SolutionFile>Rigel.sln</SolutionFile>
+  
+  <NitriqConsole>$(ToolsFolder)\Nitriq\Nitriq.Console.exe</NitriqConsole>
+  <NitriqProjectTemplate>$(ToolsFolder)\Nitriq\CAT.nitriqProj.template</NitriqProjectTemplate>
+  <NitriqProject>$(ToolsFolder)\Nitriq\CAT.nitriqProj</NitriqProject>
+  <NitriqQueries>$(ToolsFolder)\Nitriq\CAT_Globalization_queries.nq</NitriqQueries>
+  <NitriqOutputReportFile>$(MSBuildProjectDirectory)\NitriqReport.html</NitriqOutputReportFile>
+  <NitriqOutputReportFileFormatted>$(MSBuildProjectDirectory)\NitriqReportFormatted.html</NitriqOutputReportFileFormatted>
+  <AppResourceFile>$(SourceFolder)\Petroskills.CAT.Resources\AppResources.resx</AppResourceFile>
+  <PseudoLocalizedResourceFile>$(SourceFolder)\Petroskills.CAT.Resources\AppResources.en-TT.resx</PseudoLocalizedResourceFile>
+  <BuildPlatform Condition="$(ProgramW6432) != ''">x64</BuildPlatform>
+  <BuildPlatform Condition="$(BuildPlatform) == ''">x86</BuildPlatform>
+
+   <Version>$(BUILD_NUMBER)</Version>
+   <EnviromentConfig>$(ENV_CONFIG)</EnviromentConfig>
+</PropertyGroup>
+
+<!-- MSBuild Community TemplateFile Tasks -->
+<UsingTask AssemblyFile="$(ToolsFolder)\MSBuild\MSBuild.Community.Tasks.dll" TaskName="TemplateFile"/>
+
+<ItemGroup>
+    <AllThridPartyAssemblies Include="$(LibFolder)\**\*.*"/>
+    <AllBuildOutputFiles Include="$(BuildFolder)\**\*.*"/>
+    <AllPublishedOutputFiles Include="$(PublishFolder)\**\*.*"/>
+</ItemGroup>
+
+<!-- Token replacement config -->
+<ItemGroup>
+      <Tokens Include="SourceFolder">
+        <ReplacementValue>$(SourceFolder)</ReplacementValue>
+      </Tokens>
+</ItemGroup>
+
+<Target Name ="Help">
+  <Message Text="Rigel MSBuild Script" />  
+  <CallTarget Targets="_DisplayHelp"/>
+</Target>
+
+<Target Name ="Clean">
+  <Message Text="Deleting Build Artifacts Directories" />  
+  <CallTarget Targets="_CleanDirectories"/>
+</Target>
+
+<Target Name ="Build">
+  <Message Text="Building Application for config $(ENV_CONFIG)" /> 	
+  <CallTarget Targets="_CleanDirectories"/>
+  <callTarget Targets="_CompileApplication"/>
+</Target>
+
+<Target Name ="Test">
+  <Message Text="Building Application for config $(ENV_CONFIG) and executing test suite" />  
+  <CallTarget Targets="_CleanDirectories"/>
+  <callTarget Targets="_CompileApplication"/>
+  <CallTarget Targets="_TestApplication"/>
+</Target>
+
+<Target Name="FullBuild">
+  <Message Text="Full Build for config $(ENV_CONFIG)" />   
+  <CallTarget Targets="_CleanDirectories"/>
+  <CallTarget Targets="_CompileApplication"/>
+  <CallTarget Targets="_TestApplication"/>
+</Target>
+
+
+<!--
+
+
+=====[ PRIVATE TARGETS ]====
+
+  
+-->
+
+
+<Target Name="_CleanDirectories">
+  <Message Text="Cleaning Artifacts Directories" /> 
+  <RemoveDir Directories="$(BuildFolder)" ContinueOnError="true"/>
+  <RemoveDir Directories="$(PublishFolder)" ContinueOnError="true"/>
+  <RemoveDir Directories="$(PublishTempFolder)" ContinueOnError="true"/>
+  <MSBuild Projects="$(SourceFolder)\$(SolutionFile)" Targets="Clean" />
+</Target>
+
+<Target Name="_CompileApplication">
+  <Message Text="Compiling CAT Solution" /> 
+  <MSBuild
+    Projects="$(SourceFolder)\$(SolutionFile)"
+    Targets="Build"
+    Properties="OutputPath=$(BuildFolder)" />
+</Target>
+
+<Target Name="_TestApplication">
+  <Message Text="Testing Rigel Assemblies" /> 
+</Target>
+
+<Target Name="_DisplayHelp">
+  <Message Text="    Usage:" /> 
+  <Message Text="        build [Target] [Environment]" /> 
+  <Message Text="        " /> 
+  <Message Text="             [Target]: Parameter is optional default value is 'Build'" /> 
+  <Message Text="        [Environment]: Parameter is optional default value is 'DEV'" /> 
+  <Message Text="        " /> 
+  <Message Text="     Available Targets:" /> 
+  <Message Text="        Clean: Delete all build artifacts" /> 
+  <Message Text="        Compile: Compiles the application" /> 
+  <Message Text="        Build: Build the application" /> 
+  <Message Text="        Test: Builds the application and run all test" /> 
+  <Message Text="        Publish: Publish the application to the specified target" /> 
+</Target>
+ 
+</Project>
