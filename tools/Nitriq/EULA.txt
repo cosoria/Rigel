@@ -1,0 +1,85 @@
+NITRIQ SOFTWARE END-USER LICENSE AGREEMENT
+
+IMPORTANT:   THIS AGREEMENT (or "EULA") IS A LEGAL AGREEMENT BETWEEN THE PERSON, COMPANY, OR ORGANIZATION THAT HAS LICENSED THIS SOFTWARE ("YOU" OR "CUSTOMER") AND NITRIQ.   BY INSTALLING AND USING THE SOFTWARE, CUSTOMER ACCEPTS THE SOFTWARE AND AGREES TO THE TERMS OF THIS AGREEMENT.  READ IT CAREFULLY BEFORE COMPLETING THE INSTALLATION PROCESS AND USING THE SOFTWARE.   BY INSTALLING AND/OR USING THE SOFTWARE, YOU ARE CONFIRMING YOUR ACCEPTANCE OF THE SOFTWARE AND AGREEING TO BECOME BOUND BY THE TERMS OF THIS AGREEMENT.   IF YOU DO NOT AGREE TO BE BOUND BY THESE TERMS, OR DO NOT HAVE AUTHORITY TO BIND CUSTOMER TO THESE TERMS, THEN DO NOT INSTALL AND/OR USE THE SOFTWARE AND RETURN THE SOFTWARE TO YOUR PLACE OF PURCHASE FOR A FULL REFUND IN ACCORDANCE WITH ITS REFUND POLICIES.
+
+THIS EULA SHALL APPLY ONLY TO THE SOFTWARE SUPPLIED BY NITRIQ HEREWITH REGARDLESS OF WHETHER OTHER SOFTWARE IS REFERRED TO OR DESCRIBED HEREIN.
+
+The SOFTWARE is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The SOFTWARE is licensed, not sold.
+
+1. Definitions
+
+	(a) "Free Edition" means a version of the SOFTWARE, so identified, to be used only to review, demonstrate and evaluate the SOFTWARE.   The Free Edition may have limited features,  and may lack the ability for the end-user to save the end product.
+	(b) "NITRIQ" means Nitriq, LLC, and its licensors, if any.
+	(c) "Person" means natural person and not a fictitious entity.
+	(d) "SOFTWARE" means only the NITRIQ software program(s) and third party software programs, in each case, supplied by NITRIQ herewith, and corresponding documentation, associated media, printed materials, and online or electronic documentation.   Any updates to such SOFTWARE which you are entitled to receive and that has been provided to you by NITRIQ shall also mean SOFTWARE for purposes of this Agreement.
+
+
+2. GRANT OF LICENSE
+
+The SOFTWARE is licensed as follows:
+	(a) A license for the SOFTWARE may not be shared, installed or used concurrently on different computers.   Except solely for the purpose of installing the Software on a computer as described in subsections (i) – (iii), a license for the SOFTWARE may not be accessed and used via a server or network storage device. The SOFTWAREis designed for any version of Microsoft Windows that has the .Net Framework 3.5 SP1 installed. NITRIQ grants you the right to install the SOFTWAREonly on computers running the operating system for which the SOFTWAREis designed.
+		(i)	If and only if the SOFTWARE is Free Edition: NITRIQ grants you the right to install and use the SOFTWARE on as many computers as you wish provided that the use is in compliance with this Agreement. 
+		(ii)	If and only if the SOFTWARE is Pro Edition: NITRIQ grants a person named on the license the right to install and use the SOFTWARE on as many computers as the named person uses and the SOFTWARE can only be used by the named person.
+		(iii)	If and only if the SOFTWARE is Console Edition: NITRIQ grants you the right to install and use the SOFTWARE on a single computer; OR install and store the SOFTWARE on a storage device, such as a network server, used only to install the SOFTWARE on your other computers over an internal network, provided you have a license for each separate computer on which the SOFTWARE is installed and run.
+	(b) You may make one copy of the SOFTWARE in machine-readable form solely for backup purposes. You must reproduce on any such copy all copyright notices and any other proprietary legends on the original copy of the SOFTWARE.  You may not sell or transfer any copy of the SOFTWAREmade for backup purposes.  
+	(c) You agree that NITRIQ may audit your use of the SOFTWAREfor compliance with the terms of this agreement at any time, upon reasonable notice. In the event that such audit reveals any use of the SOFTWAREby you other than in full compliance with the terms of this EULA, you shall reimburse NITRIQ for all reasonable expenses related to such audit in addition to any other liabilities you may incur as a result of such non-compliance.
+	(d) Your license rights under this EULA are non-exclusive.
+
+
+3. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS
+
+	(a) Other than as set forth in Section 1, you may not make or distribute copies of the SOFTWARE, or electronically transfer the SOFTWARE from one computer to another over a network.
+	(b) You may not alter, merge, modify, adapt or translate the SOFTWARE, or decompile, reverse engineer, disassemble, or otherwise reduce the SOFTWARE to a human-perceivable form.
+	(c) Unless otherwise provided herein, you may not rent, lease, or sublicense the SOFTWARE.
+	(d) Unless otherwise provided herein, you may not modify the SOFTWARE or create derivative works based upon the SOFTWARE.
+	(e) You may not export the SOFTWARE in any country prohibited by the United States Export Administration Act and the regulations thereunder.
+	(f) You may receive the SOFTWARE in more than one medium but you shall only install or use one medium.   Regardless of the number of media you receive, you may use only the medium that is appropriate for the server or computer on which the SOFTWARE is to be installed.
+	(g) You shall not use the SOFTWARE to develop any product having the same primary function as the SOFTWARE.
+	(h) In the event that you fail to comply with this EULA, NITRIQ may terminate the license and you must destroy all copies of the SOFTWARE (with all other rights of both parties and all other provisions of this EULA surviving any such termination).
+	(i) You must not remove or alter any copyright notices on any and all copies of the SOFTWARE.
+	(j) NITRIQ may provide you with support services related to the SOFTWARE ("Support Services"). Any supplemental software code provided to you as part of the Support Services shall be considered part of the SOFTWARE and subject to the terms and conditions of this EULA.
+
+
+4. OWNERSHIP
+
+The foregoing license gives you limited license to use the SOFTWARE. NITRIQ and its suppliers retain all right, title and interest, including all copyright and intellectual property rights, in and to, the SOFTWARE (as an independent work and as an underlying work serving as a basis for any application you may develop),  and all copies thereof. All rights not specifically granted in this EULA, including Federal and International Copyrights, are reserved by NITRIQ and its suppliers.
+
+5. LIMITED WARRANTY AND DISCLAIMER
+
+	(a) NITRIQ PROVIDES NO REMEDIES OR WARRANTIES, WHETHER EXPRESS OR IMPLIED, FOR THE SOFTWARE. THE SOFTWARE IS PROVIDED “AS IS".
+	(b) NITRIQ AND ITS SUPPLIERS DISCLAIM ALL OTHER WARRANTIES AND REPRESENTATIONS, WHETHER EXPRESS, IMPLIED, OR OTHERWISE, INCLUDING THE WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. ALSO, THERE IS NO WARRANTY OF NON-INFRINGEMENT AND TITLE OR QUIET ENJOYMENT. NITRIQ DOES NOT WARRANT THAT THE SOFTWARE IS ERROR-FREE OR WILL OPERATE WITHOUT INTERRUPTION. NO RIGHTS OR REMEDIES REFERRED TO IN ARTICLE 2A OF THE UCC WILL BE CONFERRED ON YOU UNLESS EXPRESSLY GRANTED HEREIN. THE SOFTWARE IS NOT DESIGNED, INTENDED OR LICENSED FOR USE IN HAZARDOUS ENVIRONMENTS REQUIRING FAIL-SAFE CONTROLS, INCLUDING WITHOUT LIMITATION, THE DESIGN, CONSTRUCTION, MAINTENANCE OR OPERATION OF NUCLEAR FACILITIES, AIRCRAFT NAVIGATION OR COMMUNICATION SYSTEMS, AIR TRAFFIC CONTROL, AND LIFE SUPPORT OR WEAPONS SYSTEMS. NITRIQ SPECIFICALLY DISCLAIMS ANY EXPRESS OR IMPLIED WARRANTY OF FITNESS FOR SUCH PURPOSES. NITRIQ DOES NOT WARRANT OR ASSUME RESPONSIBILITY FOR THE ACCURACY OR COMPLETENESS OF ANY INFORMATION, TEXT, GRAPHICS, LINKS OR OTHER ITEMS CONTAINED WITHIN THE SOFTWARE. NITRIQ MAKES NO WARRANTIES RESPECTING ANY HARM THAT MAY BE CAUSED BY THE TRANSMISSION OF A COMPUTER VIRUS, WORM, TIME BOMB, LOGIC BOMB, OR OTHER SUCH COMPUTER PROGRAM. NITRIQ FURTHER EXPRESSLY DISCLAIMS ANY WARRANTY OR REPRESENTATION TO AUTHORIZED USERS OR TO ANY THIRD PARTY.
+	(c) IF APPLICABLE LAW REQUIRES ANY WARRANTIES WITH RESPECT TO THE SOFTWARE, ALL SUCH WARRANTIES ARE LIMITED IN DURATION TO NINETY (90) DAYS FROM THE DATE OF DELIVERY.
+	(d) NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY NITRIQ, ITS DEALERS, DISTRIBUTORS, AGENTS OR EMPLOYEES SHALL CREATE A WARRANTY OR IN ANY WAY INCREASE THE SCOPE OF ANY WARRANTY PROVIDED HEREIN.  
+	(e) (USA only) SOME STATES DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSION MAY NOT APPLY TO YOU. THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS AND YOU MAY ALSO HAVE OTHER LEGAL RIGHTS THAT VARY FROM STATE TO STATE.
+
+	
+6. EXCLUSIVE REMEDY
+
+Your exclusive remedy under the preceding is to return the SOFTWARE to the place you acquired it, with a copy of your receipt and a description of the problem.   Provided that any non-compliance with the above warranty is reported in writing to NITRIQ no more than ninety (90) days following delivery to you, NITRIQ will use reasonable commercial efforts to supply you with a replacement copy of the SOFTWARE that substantially conforms to the documentation, provide a replacement for defective media, or refund to you your purchase price for the SOFTWARE, at its option. NITRIQ shall have no responsibility if the SOFTWARE has been altered in any way, if the media has been damaged by misuse, accident, abuse, modification or misapplication, or if the failure arises out of use of the SOFTWARE with other than a recommended hardware configuration.   Any such misuse, accident, abuse, modification or misapplication of the SOFTWARE will void the warranty above.   THIS REMEDY IS THE SOLE AND EXCLUSIVE REMEDY AVAILABLE TO YOU FOR BREACH OF EXPRESS OR IMPLIED WARRANTIES WITH RESPECT TO THE SOFTWARE AND RELATED DOCUMENTATION.
+
+
+7. LIMITATION OF LIABILITY
+
+	(a)  NEITHERNITRIQ NOR ITS SUPPLIERS SHALL BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE, COVER OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, DAMAGES FOR THE INABILITY TO USE EQUIPMENT OR ACCESS DATA, LOSS OF BUSINESS, LOSS OF PROFITS, BUSINESS INTERRUPTION OR THE LIKE), ARISING OUT OF THE USE OF, OR INABILITY TO USE, THE SOFTWARE AND BASED ON ANY THEORY OF LIABILITY INCLUDING BREACH OF CONTRACT, BREACH OF WARRANTY, TORT (INCLUDING NEGLIGENCE), PRODUCT LIABILITY OR OTHERWISE, EVEN IF NITRIQ OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND EVEN IF A REMEDY SET FORTH HEREIN IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.
+	(b) NITRIQ TOTAL LIABILITY TO YOU FOR ACTUAL DAMAGES FOR ANY CAUSE WHATSOEVER WILL BE LIMITED TO THE GREATER OF $100 OR THE AMOUNT PAID BY YOU FOR THE SOFTWARE THAT CAUSED SUCH DAMAGE.
+	(c)  (USA only) SOME STATES DO NOT ALLOW THE LIMITATION OR EXCLUSION OF LIABILITY FOR INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU AND YOU MAY ALSO HAVE OTHER LEGAL RIGHTS THAT VARY FROM STATE TO STATE.
+	(d)  THE FOREGOING LIMITATIONS ON LIABILITY ARE INTENDED TO APPLY TO THE WARRANTIES AND DISCLAIMERS ABOVE AND ALL OTHER ASPECTS OF THIS EULA.
+
+
+8. LIMITATION OF USE
+
+Under no circumstances may the CUSTOMER use the SOFTWARE to analyze any other assembly or executable where the malfunction of such assembly or executable could result in the loss of life or limb.
+
+
+9. BASIS OF BARGAIN
+
+The Limited Warranty and Disclaimer, Exclusive Remedies and Limited Liability set forth above are fundamental elements of the basis of the agreement between NITRIQ and you. NITRIQ would not be able to provide the SOFTWARE on an economic basis without such limitations.   Such Limited Warranty and Disclaimer, Exclusive Remedies and Limited Liability inure to the benefit of NITRIQ licensors.
+
+
+10. GENERAL
+
+This EULA shall be governed by the internal laws of the State of Iowa, without giving effect to principles of conflict of laws.   You hereby consent to the exclusive jurisdiction and venue of the state courts sitting in Polk County, Iowa or the federal courts in the Southern District of Iowa to resolve any disputes arising under this EULA.   In each case this EULA shall be construed and enforced without regard to the United Nations Convention on the International Sale of Goods.
+This EULA contains the complete agreement between the parties with respect to the subject matter hereof, and supersedes all prior or contemporaneous agreements or understandings, whether oral or written. You agree that any varying or additional terms contained in any purchase order or other written notification or document issued by you in relation to the SOFTWARE licensed hereunder shall be of no effect. The failure or delay of NITRIQ to exercise any of its rights under this EULA or upon any breach of this EULA shall not be deemed a waiver of those rights or of the breach.
+No NITRIQ dealer, agent or employee is authorized to make any amendment to this EULA unless such amendment is in writing and signed by a duly authorized representative of NITRIQ.  
+If any provision of this EULA shall be held by a court of competent jurisdiction to be contrary to law, that provision will be enforced to the maximum extent permissible, and the remaining provisions of this EULA will remain in full force and effect.
+
