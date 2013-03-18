@@ -5,8 +5,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Core", "Rigel.Core\Ri
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Batch", "Rigel.Batch\Rigel.Batch.csproj", "{8E8EAB5A-F711-48A4-B264-5869E390F18F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Batch.Launcher", "Rigel.Batch.Launcher\Rigel.Batch.Launcher.csproj", "{09687885-1163-4C25-BEDB-D300044945B1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Data", "Rigel.Data\Rigel.Data.csproj", "{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{71B9F2B0-F4BE-437C-A8F7-3BA329B0211D}"
@@ -15,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Core.Test", "Rigel.Co
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Logging", "Rigel.Logging\Rigel.Logging.csproj", "{09069FBB-4519-4152-BB5C-3696A4BE3368}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Data.EntityFramewok", "Rigel.Data.EntityFramewok\Rigel.Data.EntityFramewok.csproj", "{A5D49E53-FC07-486A-A7BC-8EB4E3D6AE2B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Data.EntityFramework", "Rigel.Data.EntityFramework\Rigel.Data.EntityFramework.csproj", "{A5D49E53-FC07-486A-A7BC-8EB4E3D6AE2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,16 +45,6 @@ Global
 		{8E8EAB5A-F711-48A4-B264-5869E390F18F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{8E8EAB5A-F711-48A4-B264-5869E390F18F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{8E8EAB5A-F711-48A4-B264-5869E390F18F}.Release|x86.ActiveCfg = Release|Any CPU
-		{09687885-1163-4C25-BEDB-D300044945B1}.Debug|Any CPU.ActiveCfg = Debug|x86
-		{09687885-1163-4C25-BEDB-D300044945B1}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
-		{09687885-1163-4C25-BEDB-D300044945B1}.Debug|Mixed Platforms.Build.0 = Debug|x86
-		{09687885-1163-4C25-BEDB-D300044945B1}.Debug|x86.ActiveCfg = Debug|x86
-		{09687885-1163-4C25-BEDB-D300044945B1}.Debug|x86.Build.0 = Debug|x86
-		{09687885-1163-4C25-BEDB-D300044945B1}.Release|Any CPU.ActiveCfg = Release|x86
-		{09687885-1163-4C25-BEDB-D300044945B1}.Release|Mixed Platforms.ActiveCfg = Release|x86
-		{09687885-1163-4C25-BEDB-D300044945B1}.Release|Mixed Platforms.Build.0 = Release|x86
-		{09687885-1163-4C25-BEDB-D300044945B1}.Release|x86.ActiveCfg = Release|x86
-		{09687885-1163-4C25-BEDB-D300044945B1}.Release|x86.Build.0 = Release|x86
 		{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
