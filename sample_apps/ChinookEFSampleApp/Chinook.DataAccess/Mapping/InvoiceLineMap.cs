@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using Chinook.Domain;
+using Chinook.DTO;
 
 namespace Chinook.DataAccess.Mapping
 {
@@ -9,28 +9,27 @@ namespace Chinook.DataAccess.Mapping
         public InvoiceLineMap()
         {
             // Primary Key
-            this.HasKey(t => t.InvoiceLineId);
+            HasKey(t => t.InvoiceLineId);
 
             // Properties
-            this.Property(t => t.InvoiceLineId)
+            Property(t => t.InvoiceLineId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
             // Table & Column Mappings
-            this.ToTable("InvoiceLine");
-            this.Property(t => t.InvoiceLineId).HasColumnName("InvoiceLineId");
-            this.Property(t => t.InvoiceId).HasColumnName("InvoiceId");
-            this.Property(t => t.TrackId).HasColumnName("TrackId");
-            this.Property(t => t.UnitPrice).HasColumnName("UnitPrice");
-            this.Property(t => t.Quantity).HasColumnName("Quantity");
+            ToTable("InvoiceLine");
+            Property(t => t.InvoiceLineId).HasColumnName("InvoiceLineId");
+            Property(t => t.InvoiceId).HasColumnName("InvoiceId");
+            Property(t => t.TrackId).HasColumnName("TrackId");
+            Property(t => t.UnitPrice).HasColumnName("UnitPrice");
+            Property(t => t.Quantity).HasColumnName("Quantity");
 
             // Relationships
-            this.HasRequired(t => t.Invoice)
+            HasRequired(t => t.Invoice)
                 .WithMany(t => t.InvoiceLines)
                 .HasForeignKey(d => d.InvoiceId);
-            this.HasRequired(t => t.Track)
+            HasRequired(t => t.Track)
                 .WithMany(t => t.InvoiceLines)
                 .HasForeignKey(d => d.TrackId);
-
         }
     }
 }

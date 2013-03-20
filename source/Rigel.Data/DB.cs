@@ -9,11 +9,11 @@ using Rigel.Transactions;
 
 namespace Rigel.Data
 {
-    public class DB
+    public abstract class DB
     {
-        private readonly string _connString;
+        protected readonly string _connString;
 
-        public DB(string connString)
+        protected DB(string connString)
         {
             _connString = connString;
         }
@@ -116,12 +116,7 @@ namespace Rigel.Data
             }
         }
 
-        public virtual DbConnection GetOpenConnection()
-        {
-            var conn = new SqlConnection(_connString);
-            conn.Open();
-            return conn;
-        }
+        public abstract DbConnection GetOpenConnection();
 
         //private T 
 

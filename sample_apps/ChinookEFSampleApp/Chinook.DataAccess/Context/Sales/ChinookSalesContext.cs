@@ -1,11 +1,11 @@
 ﻿using System.Data.Entity;
+using Chinook.DTO;
 using Chinook.DataAccess.Mapping;
-using Chinook.Domain;
 using Rigel.Data.EntityFramewok;
 
-namespace Chinook.DataAccess
+namespace Chinook.DataAccess.Context.Sales
 {
-    public interface IChinookSalesContext : IDbContext 
+    public interface IChinookSalesContext : IEntityFrameworkContext 
     {
         IDbSet<Customer> Customers { get; set; }
         IDbSet<Employee> Employees { get; set; }

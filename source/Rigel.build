@@ -14,19 +14,18 @@
 
   <BuildFolder>$(RootFolder)\build</BuildFolder>
   <DeployFolder>$(RootFolder)\deploy</DeployFolder>
-  <PublishFolder>$(RootFolder)\publish</PublishFolder>
+  <PublishFolder>$(RootFolder)\binaries</PublishFolder>
    
   
   <SolutionFile>Rigel.sln</SolutionFile>
   
   <NitriqConsole>$(ToolsFolder)\Nitriq\Nitriq.Console.exe</NitriqConsole>
   <NitriqProjectTemplate>$(ToolsFolder)\Nitriq\CAT.nitriqProj.template</NitriqProjectTemplate>
-  <NitriqProject>$(ToolsFolder)\Nitriq\CAT.nitriqProj</NitriqProject>
-  <NitriqQueries>$(ToolsFolder)\Nitriq\CAT_Globalization_queries.nq</NitriqQueries>
+  <NitriqProject>$(ToolsFolder)\Nitriq\Rigel.nitriqProj</NitriqProject>
+  <NitriqQueries>$(ToolsFolder)\Nitriq\Rigel.Queries.nq</NitriqQueries>
   <NitriqOutputReportFile>$(MSBuildProjectDirectory)\NitriqReport.html</NitriqOutputReportFile>
   <NitriqOutputReportFileFormatted>$(MSBuildProjectDirectory)\NitriqReportFormatted.html</NitriqOutputReportFileFormatted>
-  <AppResourceFile>$(SourceFolder)\Petroskills.CAT.Resources\AppResources.resx</AppResourceFile>
-  <PseudoLocalizedResourceFile>$(SourceFolder)\Petroskills.CAT.Resources\AppResources.en-TT.resx</PseudoLocalizedResourceFile>
+  
   <BuildPlatform Condition="$(ProgramW6432) != ''">x64</BuildPlatform>
   <BuildPlatform Condition="$(BuildPlatform) == ''">x86</BuildPlatform>
 
@@ -38,9 +37,11 @@
 <UsingTask AssemblyFile="$(ToolsFolder)\MSBuild\MSBuild.Community.Tasks.dll" TaskName="TemplateFile"/>
 
 <ItemGroup>
-    <AllThridPartyAssemblies Include="$(LibFolder)\**\*.*"/>
-    <AllBuildOutputFiles Include="$(BuildFolder)\**\*.*"/>
-    <AllPublishedOutputFiles Include="$(PublishFolder)\**\*.*"/>
+  <AllThridPartyAssemblies Include="$(LibFolder)\**\*.*"/>
+  <AllBuildOutputFiles Include="$(BuildFolder)\**\*.*"/>
+  <AllPublishedOutputFiles Include="$(PublishFolder)\**\*.*"/>
+  <RigelBinaries Include="$(BuildFolder)\*.dll;$(BuildFolder)\*.pdb" 
+                 Exclude="$(BuildFolder)\**\Moq.*;$(BuildFolder)\**\nunit.framework.*;$(BuildFolder)\**\EntityFramework.*;$(BuildFolder)\**\Rigel.Core.Test.*"/>
 </ItemGroup>
 
 <!-- Token replacement config -->
@@ -63,14 +64,21 @@
 <Target Name ="Build">
   <Message Text="Building Application for config $(ENV_CONFIG)" /> 	
   <CallTarget Targets="_CleanDirectories"/>
-  <callTarget Targets="_CompileApplication"/>
+  <CallTarget Targets="_CompileApplication"/>
 </Target>
 
 <Target Name ="Test">
   <Message Text="Building Application for config $(ENV_CONFIG) and executing test suite" />  
   <CallTarget Targets="_CleanDirectories"/>
-  <callTarget Targets="_CompileApplication"/>
+  <CallTarget Targets="_CompileApplication"/>
   <CallTarget Targets="_TestApplication"/>
+</Target>
+
+<Target Name ="Publish">
+  <Message Text="Building Application and Publishing Rigel binaries" />
+  <CallTarget Targets="_CleanDirectories"/>
+  <CallTarget Targets="_CompileApplication"/>
+  <CallTarget Targets="_CopyOutputToBinariesFolder"/>
 </Target>
 
 <Target Name="FullBuild">
@@ -78,6 +86,7 @@
   <CallTarget Targets="_CleanDirectories"/>
   <CallTarget Targets="_CompileApplication"/>
   <CallTarget Targets="_TestApplication"/>
+  <CallTarget Targets="_CopyOutputToBinariesFolder"/>
 </Target>
 
 
@@ -110,6 +119,10 @@
   <Message Text="Testing Rigel Assemblies" /> 
 </Target>
 
+<Target Name="_CopyOutputToBinariesFolder">
+  <Copy SourceFiles="@(RigelBinaries)" DestinationFolder="$(PublishFolder)" />
+</Target>
+
 <Target Name="_DisplayHelp">
   <Message Text="    Usage:" /> 
   <Message Text="        build [Target] [Environment]" /> 
@@ -122,7 +135,7 @@
   <Message Text="        Compile: Compiles the application" /> 
   <Message Text="        Build: Build the application" /> 
   <Message Text="        Test: Builds the application and run all test" /> 
-  <Message Text="        Publish: Publish the application to the specified target" /> 
+  <Message Text="        Publish: Publish Rigel binaries" /> 
 </Target>
  
 </Project>

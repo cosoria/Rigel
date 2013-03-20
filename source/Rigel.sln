@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Logging", "Rigel.Logg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Data.EntityFramework", "Rigel.Data.EntityFramework\Rigel.Data.EntityFramework.csproj", "{A5D49E53-FC07-486A-A7BC-8EB4E3D6AE2B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{5642699A-57A5-4833-8294-70995E9CA2ED}"
+	ProjectSection(SolutionItems) = preProject
+		Rigel.build = Rigel.build
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

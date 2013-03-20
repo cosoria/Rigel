@@ -66,10 +66,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ChinookAllEntitiesContext.cs" />
-    <Compile Include="ChinookContext.cs" />
-    <Compile Include="ChinookMusicStoreContext.cs" />
-    <Compile Include="ChinookSalesContext.cs" />
+    <Compile Include="Context\All\ChinookAllEntitiesContext.cs" />
+    <Compile Include="Context\ChinookContext.cs" />
+    <Compile Include="Context\MusicStore\ChinookMusicStoreContext.cs" />
+    <Compile Include="Context\Sales\ChinookSalesContext.cs" />
     <Compile Include="Mapping\AlbumMap.cs" />
     <Compile Include="Mapping\ArtistMap.cs" />
     <Compile Include="Mapping\CustomerMap.cs" />
@@ -81,6 +81,10 @@
     <Compile Include="Mapping\PlaylistMap.cs" />
     <Compile Include="Mapping\TrackMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\All\CustomerRepository.cs" />
+    <Compile Include="Context\All\AllEntitiesUnitOfWork.cs" />
+    <Compile Include="Context\MusicStore\MusicStoreUnitOfWork.cs" />
+    <Compile Include="Context\Sales\SalesUnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\ChinookDatabaseSchema1.1.png" />
@@ -101,12 +105,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Chinook.Entities\Chinook.Domain.csproj">
-      <Project>{58310202-7C26-4E5D-9B3F-48803B02A681}</Project>
-      <Name>Chinook.Domain</Name>
+    <ProjectReference Include="..\Chinook.DTO\Chinook.DTO.csproj">
+      <Project>{0C495419-0289-44A9-B2B1-BED244DE6ED7}</Project>
+      <Name>Chinook.DTO</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Repositories\MusicStore\" />
+    <Folder Include="Repositories\Sales\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -22,8 +22,8 @@ namespace Chinook.Domain
         public string Phone { get; set; }
         public string Fax { get; set; }
         public string Email { get; set; }
-        public Nullable<long> SupportRepId { get; set; }
-        public virtual Employee Employee { get; set; }
+        public long? SupportRepId { get; set; }
+        public virtual Employee SupportRepresentative { get; set; }
         public virtual ICollection<Invoice> Invoices { get; set; }
     }
 }

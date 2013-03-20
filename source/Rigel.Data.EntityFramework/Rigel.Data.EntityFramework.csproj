@@ -45,10 +45,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseDbContext.cs" />
+    <Compile Include="EntityFrameworkContext.cs" />
     <Compile Include="DbContextExtensions.cs" />
-    <Compile Include="IDbContext.cs" />
+    <Compile Include="EntityFrameworkUnitOfWork.cs" />
+    <Compile Include="IEntityFrameworkContext.cs" />
     <Compile Include="EntityExtensions.cs" />
+    <Compile Include="IEntityFrameworkUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

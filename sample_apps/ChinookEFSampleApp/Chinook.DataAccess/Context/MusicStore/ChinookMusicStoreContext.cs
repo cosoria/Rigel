@@ -1,11 +1,11 @@
 ﻿using System.Data.Entity;
+using Chinook.DTO;
 using Chinook.DataAccess.Mapping;
-using Chinook.Domain;
 using Rigel.Data.EntityFramewok;
 
-namespace Chinook.DataAccess
+namespace Chinook.DataAccess.Context.MusicStore
 {
-    public interface IChinookMusicStoreContext : IDbContext
+    public interface IChinookMusicStoreContext : IEntityFrameworkContext
     {
         IDbSet<Album> Albums { get; set; }
         IDbSet<Artist> Artists { get; set; }

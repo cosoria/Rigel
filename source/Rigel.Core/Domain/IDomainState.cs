@@ -1,15 +1,25 @@
 ﻿using System;
+using Rigel.Data;
 
 namespace Rigel.Core.Domain
 {
-    public interface IDomainState<out TKey>
-    {
-        TKey Key { get; }
-        byte[] ConcurrencyKey { get; }
-        bool IsTransient { get; }
-    }
+    //public interface IDomainState
+    //{
+    //}
 
-    public interface IDomainState : IDomainState<Guid>
-    {
-    }
+    //public interface IKeyedDomainState<out TKey> : IDomainState
+    //{
+    //    TKey Key { get; }
+    //}
+
+    //public interface IConcurrentDomainState : IDomainState
+    //{
+    //    byte[] ConcurrencyKey { get; }
+    //    bool IsTransient { get; }
+    //}
+
+    //public interface IDisconnectedDomainState : IDomainState
+    //{
+    //    EntityState EntityState { get; set; }
+    //}
 }

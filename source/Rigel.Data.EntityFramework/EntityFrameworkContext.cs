@@ -2,14 +2,14 @@
 
 namespace Rigel.Data.EntityFramewok
 {
-    public class BaseDbContext<TContext> : DbContext, IDbContext where TContext : DbContext
+    public class EntityFrameworkContext<TContext> : DbContext, IEntityFrameworkContext where TContext : DbContext
     {
-        protected BaseDbContext() : base()
+        protected EntityFrameworkContext() : base()
         {
             Database.SetInitializer<TContext>(null);
         }
 
-        protected BaseDbContext(string nameOrConnectionString)
+        protected EntityFrameworkContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {
             Database.SetInitializer<TContext>(null);
@@ -20,22 +20,22 @@ namespace Rigel.Data.EntityFramewok
             this.SaveChanges();
         }
 
-        public void MarkAsAdded(IEntity entity)
+        public void MarkAsAdded(object entity)
         {
             Entry(entity).State = System.Data.EntityState.Added;
         }
 
-        public void MarkAsModified(IEntity entity)
+        public void MarkAsModified(object entity)
         {
             Entry(entity).State = System.Data.EntityState.Modified;
         }
 
-        public void MarkAsDeleted(IEntity entity)
+        public void MarkAsDeleted(object entity)
         {
             Entry(entity).State = System.Data.EntityState.Deleted;
         }
 
-        public void MarkAsUnchanged(IEntity entity)
+        public void MarkAsUnchanged(object entity)
         {
             Entry(entity).State = System.Data.EntityState.Deleted;
         }

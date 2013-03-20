@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using Chinook.Domain;
+using Chinook.DTO;
 
 namespace Chinook.DataAccess.Mapping
 {
@@ -9,19 +9,19 @@ namespace Chinook.DataAccess.Mapping
         public PlaylistMap()
         {
             // Primary Key
-            this.HasKey(t => t.PlaylistId);
+            HasKey(t => t.PlaylistId);
 
             // Properties
-            this.Property(t => t.PlaylistId)
+            Property(t => t.PlaylistId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
-            this.Property(t => t.Name)
+            Property(t => t.Name)
                 .HasMaxLength(120);
 
             // Table & Column Mappings
-            this.ToTable("Playlist");
-            this.Property(t => t.PlaylistId).HasColumnName("PlaylistId");
-            this.Property(t => t.Name).HasColumnName("Name");
+            ToTable("Playlist");
+            Property(t => t.PlaylistId).HasColumnName("PlaylistId");
+            Property(t => t.Name).HasColumnName("Name");
         }
     }
 }

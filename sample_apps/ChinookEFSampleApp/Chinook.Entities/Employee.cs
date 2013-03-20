@@ -8,16 +8,16 @@ namespace Chinook.Domain
         public Employee()
         {
             this.Customers = new List<Customer>();
-            this.Employee1 = new List<Employee>();
+            this.Subordinates = new List<Employee>();
         }
 
         public long EmployeeId { get; set; }
         public string LastName { get; set; }
         public string FirstName { get; set; }
         public string Title { get; set; }
-        public Nullable<long> ReportsTo { get; set; }
-        public Nullable<System.DateTime> BirthDate { get; set; }
-        public Nullable<System.DateTime> HireDate { get; set; }
+        public long? ReportsTo { get; set; }
+        public DateTime? BirthDate { get; set; }
+        public DateTime? HireDate { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
         public string State { get; set; }
@@ -27,7 +27,7 @@ namespace Chinook.Domain
         public string Fax { get; set; }
         public string Email { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
-        public virtual ICollection<Employee> Employee1 { get; set; }
-        public virtual Employee Employee2 { get; set; }
+        public virtual ICollection<Employee> Subordinates { get; set; }
+        public virtual Employee Manager { get; set; }
     }
 }

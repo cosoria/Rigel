@@ -63,7 +63,56 @@ namespace Rigel.Data
         }
     }
 
-    public class InMemoryRepository<TEntry> : InMemoryRepository<Guid, TEntry>
+    public class InMemoryRepository<TEntry> : IRepository<TEntry>
     {
+        private readonly Dictionary<object, TEntry> _entries;
+
+        public InMemoryRepository()
+        {
+            _entries = new Dictionary<object,TEntry>();
+        }
+
+        public TEntry Get(object key)
+        {
+            if (!_entries.ContainsKey(key))
+            {
+                return default(TEntry);
+            }
+
+            return _entries[key];
+        }
+
+        public IEnumerable<TEntry> GetAll()
+        {
+            return _entries.Values;
+        }
+
+        public IEnumerable<TEntry> GetAllMatching(Expression<Func<TEntry, bool>> filter)
+        {
+            return _entries.Values.AsQueryable().Where(filter).ToArray();
+        }
+
+        public void Add(TEntry entry)
+        {
+            _entries.Add(Guid.NewGuid(), entry);
+        }
+
+        public void Delete(object key)
+        {
+            if (_entries.ContainsKey(key))
+            {
+                _entries.Remove(key);
+            }
+        }
+
+        public void Update(TEntry entry)
+        {
+            // Not supported 
+            //if (_entries.ContainsValue(entry))
+            //{
+            //    var key = _entries.Single(e => e.Value.GetHashCode() == entry.GetHashCode()).Key;
+            //    _entries[key] = entry;
+            //}
+        }
     }
 }

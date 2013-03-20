@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using Chinook.Domain;
+using Chinook.DTO;
 
 namespace Chinook.DataAccess.Mapping
 {
@@ -9,19 +9,19 @@ namespace Chinook.DataAccess.Mapping
         public MediaTypeMap()
         {
             // Primary Key
-            this.HasKey(t => t.MediaTypeId);
+            HasKey(t => t.MediaTypeId);
 
             // Properties
-            this.Property(t => t.MediaTypeId)
+            Property(t => t.MediaTypeId)
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
 
-            this.Property(t => t.Name)
+            Property(t => t.Name)
                 .HasMaxLength(120);
 
             // Table & Column Mappings
-            this.ToTable("MediaType");
-            this.Property(t => t.MediaTypeId).HasColumnName("MediaTypeId");
-            this.Property(t => t.Name).HasColumnName("Name");
+            ToTable("MediaType");
+            Property(t => t.MediaTypeId).HasColumnName("MediaTypeId");
+            Property(t => t.Name).HasColumnName("Name");
         }
     }
 }
