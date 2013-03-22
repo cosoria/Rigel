@@ -31,16 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Rigel.Batch, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\binaries\Rigel.Batch.dll</HintPath>
+    <Reference Include="Rigel.Batch">
+      <HintPath>..\..\..\binaries\Rigel.Batch.dll</HintPath>
     </Reference>
-    <Reference Include="Rigel.Core, Version=0.0.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\binaries\Rigel.Core.dll</HintPath>
+    <Reference Include="Rigel.Container.StructureMap">
+      <HintPath>..\..\..\binaries\Rigel.Container.StructureMap.dll</HintPath>
     </Reference>
-    <Reference Include="Rigel.Logging">
-      <HintPath>..\..\binaries\Rigel.Logging.dll</HintPath>
+    <Reference Include="Rigel.Core">
+      <HintPath>..\..\..\binaries\Rigel.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="StructureMap, Version=2.6.4.0, Culture=neutral, PublicKeyToken=e60ad81abae3c223, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\structuremap.2.6.4.1\lib\net40\StructureMap.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,8 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BootstrapStructureMap.cs" />
+    <Compile Include="DoSomething.cs" />
+    <Compile Include="IDoSomething.cs" />
     <Compile Include="SampleBatchApplication.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

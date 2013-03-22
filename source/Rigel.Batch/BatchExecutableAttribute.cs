@@ -6,7 +6,7 @@ namespace Rigel.Batch
 {
     public class BatchExecutableAttribute : Attribute
     {
-        #region Variables
+        #region Fields
 
         /// These two are added for for batches that have muliple executable names.
         private string _alternateName;
@@ -73,9 +73,9 @@ namespace Rigel.Batch
             var batchNames = new List<string>(4);
 
             AddNonEmptyStringTo(batchNames, _batchName);
-            AddNonEmptyStringTo(batchNames, _legacyBatchName);
-            AddNonEmptyStringTo(batchNames, _alternateName);
-            AddNonEmptyStringTo(batchNames, _alternateNameTriforce);
+            AddIfNonEmptyStringTo(batchNames, _legacyBatchName);
+            AddIfNonEmptyStringTo(batchNames, _alternateName);
+            AddIfNonEmptyStringTo(batchNames, _alternateNameTriforce);
 
             return batchNames;
         }
@@ -84,7 +84,16 @@ namespace Rigel.Batch
         {
             Ensure.Argument.NotNull(() => batchNames);
             Ensure.Argument.NotNullOrEmpty(() => batchName);
+
             if(!string.IsNullOrEmpty(batchName))
+            {
+                batchNames.Add(batchName);
+            }
+        }
+
+        private static void AddIfNonEmptyStringTo(List<string> batchNames, string batchName)
+        {
+            if (!string.IsNullOrEmpty(batchName))
             {
                 batchNames.Add(batchName);
             }

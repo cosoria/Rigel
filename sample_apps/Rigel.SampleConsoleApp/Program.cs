@@ -4,7 +4,6 @@ using NLog;
 using NLog.Targets;
 using Rigel.Logging;
 
-
 namespace Rigel.SampleConsoleApp
 {
     class Program

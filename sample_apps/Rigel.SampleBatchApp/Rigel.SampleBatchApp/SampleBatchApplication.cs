@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Rigel.Batch;
+﻿using Rigel.Batch;
 using Rigel.Batch.Arguments;
+using Rigel.Container;
 
 namespace Rigel.SampleBatchApp
 {
@@ -33,7 +30,16 @@ namespace Rigel.SampleBatchApp
 
         public override void RunBatch()
         {
-            // do something
+            // where to initialize static gateways???
+
+            var doSomething = IoC.GetInstance<IDoSomething>();
+
+            doSomething.Run();
+        }
+
+        protected override void CreateContainer()
+        {
+            new SampleAppBootstrapper().BootstrapStructureMap();
         }
     }
 }

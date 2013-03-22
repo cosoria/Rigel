@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Container\IContainer.cs" />
+    <Compile Include="Container\IoC.cs" />
     <Compile Include="DataEventArgs.cs" />
     <Compile Include="Data\EntityState.cs" />
     <Compile Include="Data\IDataContext.cs" />

@@ -1,17 +1,17 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.CompilerServices;
 using Rigel.Batch.Arguments;
 using Rigel.Batch.Common;
 using Rigel.Batch.Common.Config;
+using Rigel.Container;
 using Rigel.Core;
 using Rigel.Logging;
+using StructureMap;
 
 namespace Rigel.Batch
 {
-    /// <summary>
-    /// Taking pieces of UnitOfWorkApplication from RhinoCommons.
-    /// </summary>
-    public abstract class BaseBatchApplication : Disposable, IBatchApplication  //,IContainerAccessor 
+    public abstract class BaseBatchApplication : Disposable, IBatchApplication 
     {
         private const string BACKUP_PREFIX = "backup_";
         
@@ -31,7 +31,7 @@ namespace Rigel.Batch
             {
                 if(ReturnCode.Instance.HasFailed() == false)
                 {
-                    //InitializeContainer(this);
+                    InitializeContainer(this);
                     PrepareBatch();
                     RunBatch();
                     ApplicationEnd();
@@ -60,6 +60,7 @@ namespace Rigel.Batch
         }
 
         public abstract void RunBatch();
+        protected abstract void CreateContainer();
 
         /// <summary>
         /// TODO Move to seperate class
@@ -140,29 +141,30 @@ namespace Rigel.Batch
             return path;
         }
 
-        //public IWindsorContainer Container
-        //{
-        //    get
-        //    {
-        //        if (IoC.IsInitialized == false)
-        //            InitializeContainer(this);
-        //        return IoC.Container;
-        //    }
-        //}
+        public Rigel.Container.IContainer Container
+        {
+            get
+            {
+                if (IoC.IsInitialized == false)
+                    InitializeContainer(this);
+
+                return IoC.Container;
+            }
+        }
 
         public ILogger Logger
         {
-            get { return new ConsoleLogger(); } // todo ioc
+            get { return IoC.GetInstance<ILogger>(); } 
         }
 
-        //[MethodImpl(MethodImplOptions.Synchronized)]
-        //private static void InitializeContainer(BaseBatchApplication self)
-        //{
-        //    if (IoC.IsInitialized)
-        //        return;
+        [MethodImpl(MethodImplOptions.Synchronized)]
+        private static void InitializeContainer(BaseBatchApplication self)
+        {
+            if (IoC.IsInitialized)
+                return;
 
-        //    self.CreateContainer();
-        //}
+            self.CreateContainer();
+        }
 
         public void ApplicationEnd()
         {
@@ -194,11 +196,12 @@ namespace Rigel.Batch
                 }
             }
 
-            //if (Container != null) //can happen if this isn't the first app
-            //{
-            //    IoC.Reset(Container);
-            //    Container.Dispose();
-            //}
+            //can happen if this isn't the first app
+            if (Container != null)
+            {
+                IoC.Reset(Container);
+                Container.Dispose();
+            }
         }
 
 
@@ -209,49 +212,5 @@ namespace Rigel.Batch
                 watcher.Dispose();
             }
         }
-        
-        //private void CreateContainer()
-        //{
-        //    var windsorConfig = GetWindsorConfig();
-
-        //    FileSystemEventHandler resetIoC = delegate { IoC.Reset(); };
-        //    watcher = new FileSystemWatcher(Path.GetDirectoryName(windsorConfig)) {Filter = Path.GetFileName(windsorConfig)};
-        //    watcher.Created += resetIoC;
-        //    watcher.Changed += resetIoC;
-        //    watcher.Deleted += resetIoC;
-
-        //    IWindsorContainer container = CreateContainer(windsorConfig);
-        //    IoC.Initialize(container);
-
-        //    watcher.EnableRaisingEvents = true;
-        //}
-
-        private static string GetWindsorConfig()
-        {
-            string windsorConfig = "Windsor.config"; // Rhino.Commons.Settings.Default.WindsorConfig;
-
-            if (!Path.IsPathRooted(windsorConfig))
-            {
-                //In ASP.Net apps, the current directory and the base path are NOT the same.
-                windsorConfig = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, windsorConfig);
-            }
-
-            string[] extensions = { ".config", ".boo" };
-            foreach (string extension in extensions)
-            {
-                string path = windsorConfig + extension;
-                if (File.Exists(path))
-                {
-                    windsorConfig = path;
-                    break;
-                }
-            }
-            return windsorConfig;
-        }
-
-        //protected virtual IWindsorContainer CreateContainer(string windsorConfig)
-        //{
-        //    return new RhinoContainer(windsorConfig);
-        //}
     }
 }
