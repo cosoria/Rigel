@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Chinook.DTO
+namespace Chinook.Entities
 {
     public partial class Invoice
     {

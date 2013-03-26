@@ -1,6 +1,6 @@
 ﻿using System.Data.Entity;
-using Chinook.DTO;
 using Chinook.DataAccess.Mapping;
+using Chinook.Entities;
 using Rigel.Data.EntityFramewok;
 
 namespace Chinook.DataAccess.Context.MusicStore

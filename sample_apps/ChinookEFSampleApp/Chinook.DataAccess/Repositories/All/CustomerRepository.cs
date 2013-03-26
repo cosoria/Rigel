@@ -2,20 +2,26 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
-using Chinook.DTO;
 using Chinook.DataAccess.Context.All;
+using Chinook.Entities;
+using Rigel.Core;
 using Rigel.Data;
 using Rigel.Data.EntityFramewok;
 
 namespace Chinook.DataAccess.Repositories.All
 {
-    public class CustomerRepository : IRepository<Customer>
+    public interface ICustomerRepository : IRepository<Customer>
     {
-        private readonly IEntityFrameworkUnitOfWork _uow;
+    }
+
+    public class CustomerRepository : ICustomerRepository
+    {
+        private readonly IChinookAllEntitiesContext _context;
 
         public CustomerRepository(IEntityFrameworkUnitOfWork uow)
         {
-            _uow = uow;
+            _context = uow.Context as IChinookAllEntitiesContext;
+            Ensure.NotNull(() => _context);
         }
         
         public Customer Get(object key)
@@ -51,7 +57,7 @@ namespace Chinook.DataAccess.Repositories.All
 
         private IChinookAllEntitiesContext GetContext()
         {
-            return _uow.Context as IChinookAllEntitiesContext;
+            return _context;
         }
     }
 }

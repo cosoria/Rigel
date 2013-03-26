@@ -85,6 +85,7 @@
     <Compile Include="Context\All\AllEntitiesUnitOfWork.cs" />
     <Compile Include="Context\MusicStore\MusicStoreUnitOfWork.cs" />
     <Compile Include="Context\Sales\SalesUnitOfWork.cs" />
+    <Compile Include="Repositories\All\GenreRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\ChinookDatabaseSchema1.1.png" />
@@ -105,9 +106,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Chinook.DTO\Chinook.DTO.csproj">
+    <ProjectReference Include="..\Chinook.DTO\Chinook.Entities.csproj">
       <Project>{0C495419-0289-44A9-B2B1-BED244DE6ED7}</Project>
-      <Name>Chinook.DTO</Name>
+      <Name>Chinook.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

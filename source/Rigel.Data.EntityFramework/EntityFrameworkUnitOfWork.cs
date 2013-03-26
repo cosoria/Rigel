@@ -1,6 +1,8 @@
-﻿namespace Rigel.Data.EntityFramewok
+﻿using Rigel.Core;
+
+namespace Rigel.Data.EntityFramewok
 {
-    public class EntityFrameworkUnitOfWork : IEntityFrameworkUnitOfWork
+    public class EntityFrameworkUnitOfWork : Disposable, IEntityFrameworkUnitOfWork
     {
         private readonly IEntityFrameworkContext _context;
         
@@ -17,6 +19,14 @@
         public void Save()
         {
             _context.Save();
+        }
+
+        protected override void DisposeManagedResources()
+        {
+            if (_context != null)
+            {
+                _context.Dispose();
+            }
         }
     }
 }

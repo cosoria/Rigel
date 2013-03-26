@@ -1,4 +1,4 @@
-﻿namespace Chinook.DTO
+﻿namespace Chinook.Entities
 {
     public partial class InvoiceLine
     {

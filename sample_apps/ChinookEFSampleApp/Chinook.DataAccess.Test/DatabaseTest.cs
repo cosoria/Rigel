@@ -2,8 +2,8 @@
 using System.Configuration;
 using System.IO;
 using System.Linq;
-using Chinook.DTO;
 using Chinook.DataAccess.Test.Context;
+using Chinook.Entities;
 using NUnit.Framework;
 
 // ReSharper disable InconsistentNaming

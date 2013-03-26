@@ -46,7 +46,8 @@
     <Reference Include="Rigel.Data">
       <HintPath>..\lib\Rigel\Rigel.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Rigel.Data.EntityFramewok">
+    <Reference Include="Rigel.Data.EntityFramewok, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\Rigel\Rigel.Data.EntityFramewok.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -73,6 +74,7 @@
     <Compile Include="Respositories\CustomerRepositoryTest.cs" />
     <Compile Include="Context\ChinookTestContext.cs" />
     <Compile Include="Context\TestUnitOfWork.cs" />
+    <Compile Include="Respositories\GenreRepositoryTest.cs" />
     <Compile Include="SQLiteDB.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -87,9 +89,9 @@
       <Project>{C88030B0-4210-44A5-AF0C-F8AEAFFBD318}</Project>
       <Name>Chinook.DataAccess</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Chinook.DTO\Chinook.DTO.csproj">
+    <ProjectReference Include="..\Chinook.DTO\Chinook.Entities.csproj">
       <Project>{0C495419-0289-44A9-B2B1-BED244DE6ED7}</Project>
-      <Name>Chinook.DTO</Name>
+      <Name>Chinook.Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

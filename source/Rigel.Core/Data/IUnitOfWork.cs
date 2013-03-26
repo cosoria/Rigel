@@ -1,6 +1,8 @@
-﻿namespace Rigel.Data
+﻿using System;
+
+namespace Rigel.Data
 {
-    public interface IUnitOfWork
+    public interface IUnitOfWork : IDisposable
     {
         void Save();
     }

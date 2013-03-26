@@ -1,6 +1,6 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity.ModelConfiguration;
-using Chinook.DTO;
+using Chinook.Entities;
 
 namespace Chinook.DataAccess.Mapping
 {
