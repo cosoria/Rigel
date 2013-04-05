@@ -10,8 +10,8 @@ namespace Rigel.Data.EntityFramewok
 {
     public abstract class InMemoryDbSet<TEntity> : IDbSet<TEntity> where TEntity : class, new()
     {
-        private readonly ObservableCollection<TEntity> _entities;
-        private readonly IQueryable _query;
+        protected readonly ObservableCollection<TEntity> _entities;
+        protected readonly IQueryable _query;
 
         protected InMemoryDbSet()
         {

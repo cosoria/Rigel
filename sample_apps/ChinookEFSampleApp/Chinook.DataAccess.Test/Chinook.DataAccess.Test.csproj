@@ -69,6 +69,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\ChinookInMemoryTestContext.cs" />
+    <Compile Include="Context\ChinookInMemoryDbSets.cs" />
     <Compile Include="DatabaseTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Respositories\CustomerRepositoryTest.cs" />
