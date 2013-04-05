@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Rigel.Data;
 
 namespace Chinook.Entities
 {
-    public partial class Album
+    public partial class Album : IEntity
     {
         public Album()
         {

@@ -28,7 +28,7 @@ namespace Chinook.DataAccess.Test.Respositories
         {
             SeedDatabase();
 
-            using (var uow = new EntityFrameworkUnitOfWork(new ChinookAllEntitiesContext()))
+            using (var uow = new EntityFrameworkUnitOfWork<ChinookAllEntitiesContext>())
             {
                 var repo = new GenreRepository(uow);
                 repo.Add(new Genre { GenreId = 600, Name = "Test"});
@@ -36,7 +36,7 @@ namespace Chinook.DataAccess.Test.Respositories
                 uow.Save();
             }
 
-            using (var uow = new EntityFrameworkUnitOfWork(new ChinookAllEntitiesContext()))
+            using (var uow = new EntityFrameworkUnitOfWork<ChinookAllEntitiesContext>())
             {
                 var repo = new GenreRepository(uow);
                 var testGenre = repo.Get(600);
@@ -52,7 +52,7 @@ namespace Chinook.DataAccess.Test.Respositories
         {
             SeedDatabase();
 
-            using (var uow = new EntityFrameworkUnitOfWork(new ChinookAllEntitiesContext()))
+            using (var uow = new EntityFrameworkUnitOfWork<ChinookAllEntitiesContext>())
             {
                 var repo = new GenreRepository(uow);
                 var testGenre = repo.Get(100);
@@ -61,7 +61,7 @@ namespace Chinook.DataAccess.Test.Respositories
                 uow.Save();
             }
 
-            using (var uow = new EntityFrameworkUnitOfWork(new ChinookAllEntitiesContext()))
+            using (var uow = new EntityFrameworkUnitOfWork<ChinookAllEntitiesContext>())
             {
                 var repo = new GenreRepository(uow);
                 var testGenre = repo.Get(100);
@@ -76,7 +76,7 @@ namespace Chinook.DataAccess.Test.Respositories
         {
             SeedDatabase();
 
-            using (var uow = new EntityFrameworkUnitOfWork(new ChinookAllEntitiesContext()))
+            using (var uow = new EntityFrameworkUnitOfWork<ChinookAllEntitiesContext>())
             {
                 var repo = new GenreRepository(uow);
                 repo.Delete(100);
@@ -84,7 +84,7 @@ namespace Chinook.DataAccess.Test.Respositories
                 uow.Save();
             }
 
-            using (var uow = new EntityFrameworkUnitOfWork(new ChinookAllEntitiesContext()))
+            using (var uow = new EntityFrameworkUnitOfWork<ChinookAllEntitiesContext>())
             {
                 var repo = new GenreRepository(uow);
                 var testGenre = repo.Get(100);
@@ -98,7 +98,7 @@ namespace Chinook.DataAccess.Test.Respositories
         {
             SeedDatabase();
 
-            using (var uow = new EntityFrameworkUnitOfWork(new ChinookAllEntitiesContext()))
+            using (var uow = new EntityFrameworkUnitOfWork<ChinookAllEntitiesContext>())
             {
                 var repo = new GenreRepository(uow);
                 var allGenres = repo.GetAll();
@@ -112,7 +112,7 @@ namespace Chinook.DataAccess.Test.Respositories
         {
             SeedDatabase();
 
-            using (var uow = new EntityFrameworkUnitOfWork(new ChinookAllEntitiesContext()))
+            using (var uow = new EntityFrameworkUnitOfWork<ChinookAllEntitiesContext>())
             {
                 var repo = new GenreRepository(uow);
                 var rockGenres = repo.GetAllMatching(g => g.Name.Contains("Rock"));

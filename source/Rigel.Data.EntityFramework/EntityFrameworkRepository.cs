@@ -1,38 +1,41 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using Rigel.Core;
 
 namespace Rigel.Data.EntityFramewok
 {
-    public abstract class EntityFrameworkRepository<T> : IRepository<T> 
+    public abstract class EntityFrameworkRepository<TEntity> : Disposable, IRepository<TEntity> where TEntity : class, IEntity
     {
         protected readonly IEntityFrameworkUnitOfWork _uow;
+        protected readonly IEntityFrameworkContext _context;
 
         protected EntityFrameworkRepository(IEntityFrameworkUnitOfWork uow)
         {
             _uow = uow;
+            _context = _uow.Context;
         }
 
-        public abstract T Get(object key);
+        public abstract TEntity Get(object key);
 
-        public abstract IEnumerable<T> GetAll();
+        public abstract IEnumerable<TEntity> GetAll();
 
-        public abstract IEnumerable<T> GetAllMatching(Expression<Func<T, bool>> filter);
+        public abstract IEnumerable<TEntity> GetAllMatching(Expression<Func<TEntity, bool>> filter);
         
-        public void Add(T entry)
+        public void Add(TEntity entry)
         {
-            _uow.Context.MarkAsAdded(entry);
+            _context.MarkAsAdded(entry);
         }
 
         public void Delete(object key)
         {
             var entry = Get(key);
-            _uow.Context.MarkAsDeleted(entry);
+            _context.MarkAsDeleted(entry);
         }
 
-        public void Update(T entry)
+        public void Update(TEntity entry)
         {
-            _uow.Context.MarkAsModified(entry);
+            _context.MarkAsModified(entry);
         }
     }
 }

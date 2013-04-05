@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Rigel.Data;
 
 namespace Chinook.Entities
 {
-    public partial class Customer
+    public partial class Customer : IEntity
     {
         public Customer()
         {

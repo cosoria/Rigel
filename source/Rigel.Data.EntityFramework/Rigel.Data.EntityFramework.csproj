@@ -54,6 +54,7 @@
     <Compile Include="IEntityFrameworkContext.cs" />
     <Compile Include="EntityExtensions.cs" />
     <Compile Include="IEntityFrameworkUnitOfWork.cs" />
+    <Compile Include="InMemoryDbSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -14,50 +14,31 @@ namespace Chinook.DataAccess.Repositories.All
     {
     }
 
-    public class CustomerRepository : ICustomerRepository
+    public class CustomerRepository : EntityFrameworkRepository<Customer>, ICustomerRepository
     {
-        private readonly IChinookAllEntitiesContext _context;
-
-        public CustomerRepository(IEntityFrameworkUnitOfWork uow)
+        public CustomerRepository(IEntityFrameworkUnitOfWork uow) : base(uow)
         {
-            _context = uow.Context as IChinookAllEntitiesContext;
-            Ensure.NotNull(() => _context);
+            Ensure.NotNull(() => GetContext());
         }
-        
-        public Customer Get(object key)
+
+        public override Customer Get(object key)
         {
             return GetContext().Customers.Find(key);
         }
 
-        public IEnumerable<Customer> GetAll()
+        public override IEnumerable<Customer> GetAll()
         {
             return GetContext().Customers.ToArray();
         }
 
-        public IEnumerable<Customer> GetAllMatching(Expression<Func<Customer, bool>> filter)
+        public override IEnumerable<Customer> GetAllMatching(Expression<Func<Customer, bool>> filter)
         {
             return GetContext().Customers.Where(filter).ToArray();
         }
 
-        public void Add(Customer entry)
+        private ChinookAllEntitiesContext GetContext()
         {
-            GetContext().MarkAsAdded(entry);
-        }
-
-        public void Delete(object key)
-        {
-            var entry = Get(key);
-            GetContext().MarkAsDeleted(entry);
-        }
-
-        public void Update(Customer entry)
-        {
-            GetContext().MarkAsModified(entry);
-        }
-
-        private IChinookAllEntitiesContext GetContext()
-        {
-            return _context;
+            return _context as ChinookAllEntitiesContext;
         }
     }
 }

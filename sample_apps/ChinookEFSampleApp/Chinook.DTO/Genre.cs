@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
+using Rigel.Data;
 
 namespace Chinook.Entities
 {
-    
-    public partial class Genre
+
+    public partial class Genre : IEntity
     {
         public Genre()
         {

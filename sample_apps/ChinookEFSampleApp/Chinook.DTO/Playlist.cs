@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Rigel.Data;
 
 namespace Chinook.Entities
 {
-    public partial class Playlist
+    public partial class Playlist : IEntity
     {
         public Playlist()
         {

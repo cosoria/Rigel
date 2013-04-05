@@ -1,6 +1,8 @@
-﻿namespace Chinook.Entities
+﻿using Rigel.Data;
+
+namespace Chinook.Entities
 {
-    public partial class InvoiceLine
+    public partial class InvoiceLine : IEntity
     {
         public long InvoiceLineId { get; set; }
         public long InvoiceId { get; set; }

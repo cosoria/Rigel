@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using Rigel.Data;
 
 namespace Chinook.Entities
 {
-    public partial class Invoice
+    public partial class Invoice : IEntity
     {
         public Invoice()
         {

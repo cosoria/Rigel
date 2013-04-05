@@ -1,8 +1,9 @@
 ﻿using System.Collections.Generic;
+using Rigel.Data;
 
 namespace Chinook.Entities
 {
-    public partial class MediaType
+    public partial class MediaType : IEntity
     {
         public MediaType()
         {

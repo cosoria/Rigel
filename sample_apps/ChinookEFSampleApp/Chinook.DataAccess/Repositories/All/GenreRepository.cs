@@ -15,7 +15,7 @@ namespace Chinook.DataAccess.Repositories.All
     {
     }
 
-    public class GenreRepository : IGenreRepository
+    public class GenreRepository : Disposable, IGenreRepository
     {
         private readonly IChinookAllEntitiesContext _context;
 

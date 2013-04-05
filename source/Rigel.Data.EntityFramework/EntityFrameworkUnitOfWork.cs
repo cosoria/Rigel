@@ -2,16 +2,20 @@
 
 namespace Rigel.Data.EntityFramewok
 {
-    public class EntityFrameworkUnitOfWork : Disposable, IEntityFrameworkUnitOfWork
+    public class EntityFrameworkUnitOfWork<TContext> : Disposable, IEntityFrameworkUnitOfWork where TContext : class, IEntityFrameworkContext, new() 
     {
-        private readonly IEntityFrameworkContext _context;
-        
+        private readonly TContext _context;
+
         public IEntityFrameworkContext Context
         {
             get { return _context; }
         }
 
-        public EntityFrameworkUnitOfWork(IEntityFrameworkContext context)
+        public EntityFrameworkUnitOfWork() :this(new TContext())
+        {
+        }
+
+        public EntityFrameworkUnitOfWork(TContext context)
         {
             _context = context;
         }

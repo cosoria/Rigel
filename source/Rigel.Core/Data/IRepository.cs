@@ -4,23 +4,23 @@ using System.Linq.Expressions;
 
 namespace Rigel.Data
 {
-    public interface IRepository<TEntry>
+    public interface IRepository<TEntity> : IDisposable where TEntity : class, IEntity
     {
-        TEntry Get(object key);
-        IEnumerable<TEntry> GetAll();
-        IEnumerable<TEntry> GetAllMatching(Expression<Func<TEntry, bool>> filter);
-        void Add(TEntry entry);
+        TEntity Get(object key);
+        IEnumerable<TEntity> GetAll();
+        IEnumerable<TEntity> GetAllMatching(Expression<Func<TEntity, bool>> filter);
+        void Add(TEntity entry);
         void Delete(object key);
-        void Update(TEntry entry);
+        void Update(TEntity entry);
     }
-    
-    public interface IRepository<TEntry, in TKey>
+
+    public interface IRepository<TEntity, in TKey> : IDisposable where TEntity : class, IEntity
     {
-        TEntry Get(TKey key);
-        IEnumerable<TEntry> GetAll();
-        IEnumerable<TEntry> GetAllMatching(Expression<Func<TEntry, bool>> filter);
-        void Add(TKey key, TEntry entry);
+        TEntity Get(TKey key);
+        IEnumerable<TEntity> GetAll();
+        IEnumerable<TEntity> GetAllMatching(Expression<Func<TEntity, bool>> filter);
+        void Add(TKey key, TEntity entry);
         void Delete(TKey key);
-        void Update(TKey key, TEntry entry);
+        void Update(TKey key, TEntity entry);
     }
 }

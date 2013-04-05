@@ -82,9 +82,6 @@
     <Compile Include="Mapping\TrackMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\All\CustomerRepository.cs" />
-    <Compile Include="Context\All\AllEntitiesUnitOfWork.cs" />
-    <Compile Include="Context\MusicStore\MusicStoreUnitOfWork.cs" />
-    <Compile Include="Context\Sales\SalesUnitOfWork.cs" />
     <Compile Include="Repositories\All\GenreRepository.cs" />
   </ItemGroup>
   <ItemGroup>
