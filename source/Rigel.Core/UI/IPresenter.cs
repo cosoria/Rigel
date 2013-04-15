@@ -1,14 +1,16 @@
-﻿namespace Rigel.UI
+﻿using Rigel.Core.Messaging;
+
+namespace Rigel.UI
 {
     public interface IPresenter
     {
         IView View { get; }
+        IMessenger Messenger { get; }
     }
 
-    public interface IPresenter<TModel> : IPresenter where TModel: class
+    public interface IPresenter<TModel> : IPresenter where TModel: class, new()
     {
-        #pragma warning disable 108,114
-        IView<TModel> View { get; }
-        #pragma warning restore 108,114
+        TModel Model { get; }
+        new IView<TModel> View { get; }
     }
 }

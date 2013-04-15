@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{6B9F8F5A-92DA-46A0-AC6E-F12649A6CDEF}</ProjectGuid>
+    <ProjectGuid>{496490E2-7E97-4883-8FD2-60865EF2D436}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Rigel.Web</RootNamespace>
-    <AssemblyName>Rigel.Web</AssemblyName>
+    <RootNamespace>Rigel.Winforms</RootNamespace>
+    <AssemblyName>Rigel.Winforms</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -33,7 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,16 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="NHibernateHttpModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\IWebPresenter.cs" />
-    <Compile Include="UI\IWebView.cs" />
-    <Compile Include="UI\RigelPage.cs">
-      <SubType>ASPXCodeBehind</SubType>
+    <Compile Include="UI\IFormPresenter.cs" />
+    <Compile Include="UI\IFormView.cs" />
+    <Compile Include="UI\RigelForm.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI\RigelWebPresenter.cs" />
+    <Compile Include="UI\RigelFormPresenter.cs" />
     <Compile Include="UI\RigelUserControl.cs">
-      <SubType>ASPXCodeBehind</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
