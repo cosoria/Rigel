@@ -67,7 +67,10 @@ namespace Rigel.Core
 
             public static void NotNull<TValue>(TValue value, string argumentName = "?") where TValue : class
             {
-                throw new ArgumentNullException(argumentName, string.Format("Argument '{0}' of type '{1}' can not be null", argumentName, typeof (TValue).Name));
+                if(value == null)
+                {
+                    throw new ArgumentNullException(argumentName, string.Format("Argument '{0}' of type '{1}' can not be null", argumentName, typeof(TValue).Name));
+                }
             }
 
             public static void NotNull<TValue>(Expression<Func<TValue>> argumentReference) where TValue : class
@@ -76,7 +79,6 @@ namespace Rigel.Core
                 {
                     return;
                 }
-
 
                 var message = StringUtil.FormatInvariant("Parameter of type '{0}' can't be null", typeof (TValue).Name);
                 var paramName = Reflect.VariableName(argumentReference);

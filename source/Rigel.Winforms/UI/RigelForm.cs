@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.ComponentModel;
+using System.Windows.Forms;
 using Rigel.Core.Messaging;
 
 namespace Rigel.Winforms.UI
@@ -10,6 +11,7 @@ namespace Rigel.Winforms.UI
 
     public class RigelForm<TModel> : RigelForm, IFormView<TModel> where TModel : class, new()
     {
+        [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
         public TModel Model { get; set; }
     }
 }
