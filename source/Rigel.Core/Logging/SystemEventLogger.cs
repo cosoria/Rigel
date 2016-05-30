@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Threading;
 using Rigel.Core.Threading;
 
-namespace Rigel.Logging
+namespace Rigel.Core.Logging
 {
     public class SystemEventLogger : ILogger
     {

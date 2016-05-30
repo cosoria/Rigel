@@ -1,4 +1,4 @@
-﻿namespace Rigel.Data
+﻿namespace Rigel.Core.Data
 {
     public enum EntityState
     {

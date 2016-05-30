@@ -1,4 +1,4 @@
-﻿namespace Rigel.Logging
+﻿namespace Rigel.Core.Logging
 {
     public enum LogSeverity
     {

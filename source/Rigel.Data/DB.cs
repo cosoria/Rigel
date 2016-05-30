@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.Common;
 using Dapper;
-using Rigel.Transactions;
+using Rigel.Core.Transactions;
 
 // ReSharper disable InconsistentNaming
 

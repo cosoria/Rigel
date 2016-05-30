@@ -1,5 +1,4 @@
 ﻿using System;
-using Rigel.Data;
 
 namespace Rigel.Core.Domain
 {

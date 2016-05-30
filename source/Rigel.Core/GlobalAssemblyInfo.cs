@@ -10,10 +10,13 @@ using System.Security;
 [assembly: AllowPartiallyTrustedCallers]
 [assembly: ComVisible(false)]
 
-public static class GlobalAssemblyInfo
+namespace Rigel.Core
 {
-    internal const string Copyright = "Copyright (c) Rigel Technologies Inc 2013";
-    internal const string Trademark = "These libraries are released under the terms of BSD licence";
-    internal const string Company = "Rigel Technologies Inc";
-    internal const string Product = "Rigel Infrastructure Libraries";         
+    public static class GlobalAssemblyInfo
+    {
+        internal const string Copyright = "Copyright (c) Rigel Technologies Inc 2013";
+        internal const string Trademark = "These libraries are released under the terms of BSD licence";
+        internal const string Company = "Rigel Technologies Inc";
+        internal const string Product = "Rigel Infrastructure Libraries";         
+    }
 }

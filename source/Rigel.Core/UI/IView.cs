@@ -1,6 +1,6 @@
 ﻿using Rigel.Core.Messaging;
 
-namespace Rigel.UI
+namespace Rigel.Core.UI
 {
     public interface IView
     {

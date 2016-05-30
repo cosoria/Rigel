@@ -1,6 +1,6 @@
 ﻿using System.Transactions;
 
-namespace Rigel.Transactions
+namespace Rigel.Core.Transactions
 {
     public static class ScopeFactory
     {

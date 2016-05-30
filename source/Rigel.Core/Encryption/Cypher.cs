@@ -3,11 +3,11 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Rigel.Encryption
+namespace Rigel.Core.Encryption
 {
     public class Cypher
     {
-        private static byte[] _salt = Encoding.ASCII.GetBytes("o6806642kbM7c5");
+        private static readonly byte[] _salt = Encoding.ASCII.GetBytes("o6806642kbM7c5");
 
         /// <summary>
         /// Encrypt the given string using AES.  The string can be decrypted using 

@@ -5,6 +5,7 @@ using System.Reflection;
 using NLog;
 using NLog.Config;
 using NLog.Targets;
+using Rigel.Core.Logging;
 using Rigel.Core.Utils;
 
 namespace Rigel.Logging

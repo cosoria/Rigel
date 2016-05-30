@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using Rigel.Core;
+using Rigel.Core.Data;
 
 namespace Rigel.Data
 {
@@ -36,9 +37,10 @@ namespace Rigel.Data
             return _entries.Values.AsQueryable().Where(filter).ToArray();
         }
 
-        public void Add(TEntity entry)
+        public TEntity Add(TEntity entry)
         {
             _entries.Add(Guid.NewGuid(), entry);
+            return entry;
         }
 
         public void Delete(object key)
@@ -49,9 +51,9 @@ namespace Rigel.Data
             }
         }
 
-        public void Update(TEntity entry)
+        public TEntity Update(TEntity entry)
         {
-            // Nothing to do here  
+            return entry;
         }
 
         protected override void DisposeManagedResources()
@@ -61,6 +63,7 @@ namespace Rigel.Data
         }
     }
 
+    /*
     public class InMemoryRepository<TEntity, TKey> : Disposable, IRepository<TEntity, TKey> where TEntity : class, IEntity
     {
         private readonly Dictionary<TKey,TEntity> _entries;
@@ -124,4 +127,5 @@ namespace Rigel.Data
             _entries.Clear();
         }
     }
+    */
 }

@@ -1,5 +1,6 @@
 ﻿using Rigel.Core;
 using NLog;
+using Rigel.Core.Logging;
 
 namespace Rigel.Logging
 {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Rigel.Container
+namespace Rigel.Core.Container
 {
     public class IoC
     {
@@ -39,7 +39,7 @@ namespace Rigel.Container
 
             try
             {
-                service = _container.GetInstance<TDependency>();
+                service = _container.Resolve<TDependency>();
             }
             catch (NullReferenceException ex)
             {

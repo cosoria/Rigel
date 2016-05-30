@@ -1,7 +1,31 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Core", "Rigel.Core\Rigel.Core.csproj", "{D4648A46-1898-48FD-8C5B-5263DD09CA8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Data", "Rigel.Data\Rigel.Data.csproj", "{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rigel.Logging", "Rigel.Logging\Rigel.Logging.csproj", "{09069FBB-4519-4152-BB5C-3696A4BE3368}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4648A46-1898-48FD-8C5B-5263DD09CA8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4648A46-1898-48FD-8C5B-5263DD09CA8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4648A46-1898-48FD-8C5B-5263DD09CA8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4648A46-1898-48FD-8C5B-5263DD09CA8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B89531C5-8269-4C23-A76A-0EBDC37AC2B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09069FBB-4519-4152-BB5C-3696A4BE3368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09069FBB-4519-4152-BB5C-3696A4BE3368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09069FBB-4519-4152-BB5C-3696A4BE3368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09069FBB-4519-4152-BB5C-3696A4BE3368}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection

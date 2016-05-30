@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Rigel.Logging
+namespace Rigel.Core.Logging
 {
     public static class LoggerExtensions
     {

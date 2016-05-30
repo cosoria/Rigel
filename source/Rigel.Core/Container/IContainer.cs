@@ -1,9 +1,9 @@
 ﻿using System;
 
-namespace Rigel.Container
+namespace Rigel.Core.Container
 {
     public interface IContainer : IDisposable
     {
-        TDependency GetInstance<TDependency>();
+        TDependency Resolve<TDependency>();
     }
 }
